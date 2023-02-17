@@ -10,17 +10,17 @@ function Sitemap() {
             <h4 className=""><i>Authentication</i></h4>
             <hr/>
             <ul>
-                <li><Link className="text-decoration-none" target={"_blank"} href={"/Registration"}>Get Yourself Registered</Link></li>
-                <li><Link className="text-decoration-none" target={"_blank"} href={"/Login"}>Login</Link></li>
-                <li><Link className="text-decoration-none" target={"_blank"} href={"/ForgetPassword"}>Forget Password</Link></li>
+                <li><Link className="text-decoration-none" target={"_blank"} href={"/registration"}>Get Yourself Registered</Link></li>
+                <li><Link className="text-decoration-none" target={"_blank"} href={"/login"}>Login</Link></li>
+                <li><Link className="text-decoration-none" target={"_blank"} href={"/forgetpassword"}>Forget Password</Link></li>
             </ul>
             <h4><em>Tasks</em></h4>
             <hr/>
             <ul>
                 <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/GetAllTasks"}>Get All Tasks</Link></li>
-                <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/GetTask"}>Get Task Details</Link></li>
-                <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/Edit"}>Edit Task</Link></li>
-                <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/Delete"}>Delete Task</Link></li>
+                <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/getTask"}>Get Task Details</Link></li>
+                <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/rdit"}>Edit Task</Link></li>
+                <li><Link className="text-decoration-none" target={"_blank"} href={"/tasks/delete"}>Delete Task</Link></li>
             </ul>
             <h4><em>Others</em></h4>
             <hr/>

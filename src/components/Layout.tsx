@@ -32,11 +32,13 @@ const Layout = ({ children }:{children: React.ReactNode}) => {
                         <div className='col-md-3 bg-secondary text-white h-100'>
                             <nav>
                                 <Link className='text-white text-decoration-none m-2 p-2' href="/">Home</Link> <br/>
-                                <Link className='text-white text-decoration-none m-2 p-2' href="/Login">Login</Link>
+                                <Link className='text-white text-decoration-none m-2 p-2' href="/login">Login</Link>
                             </nav>
                         </div>
                         <div className='col bg-warning p-2'>
-                            {children}
+                            <div className='bg-white p-2'>
+                                {children}
+                            </div>
                         </div>
                     </div>
                     <div className='bg-light text-center footer'>

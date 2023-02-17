@@ -10,8 +10,11 @@ export default function Home() {
           <title>Exercise App - Index</title>
         </Head>
         <Layout>
-          <h2>Index</h2>
-          <Link href='/tasks/GetAllTasks'>Get All Tasks</Link>
+            <h2 className="bg-light text-dark p-2">Home</h2>
+            <div className="m-2 p-2">
+              <Link href='/tasks/GetAllTasks'>Goto Tasks</Link> <br/>
+              <Link href='/blogs/index'>Goto Blogs</Link>
+            </div>
         </Layout>
       </div>
   )
