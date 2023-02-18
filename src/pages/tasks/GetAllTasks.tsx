@@ -2,6 +2,7 @@ import Link from "next/link";
 import Script from 'next/script'
 import Layout from "../../components/Layout";
 import Head from 'next/head'
+import { TaskService } from "@/services/TaskService";
 
 const GetAllTasks = () => {
     const envelop = {
@@ -191,6 +192,8 @@ const GetAllTasks = () => {
         ]
     };
     const tasks = envelop.content;
+    const service = new TaskService();
+    console.log(service.GetAll());
     return <div>
             <Head>
                 <title>Excercise App - Tasks</title>

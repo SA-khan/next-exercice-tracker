@@ -1,7 +1,9 @@
+import { Mixin } from 'ts-mixer';
+import Mongoose, { Model } from 'mongoose'
 import { AuditableModel } from './AuditableModel'
 import { UserModel } from './UserModel';
 
-export class TaskModel extends AuditableModel {
+export class TaskModel extends Mixin(AuditableModel, Mongoose.Schema) {
     constructor(
         public taskId?: number,
         public title?: string,

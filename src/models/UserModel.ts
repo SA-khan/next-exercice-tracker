@@ -3,8 +3,10 @@ import { AuditableModel } from "./AuditableModel";
 import { RatingModel } from "./RatingModel";
 import { UserAccessRightModel } from "./UserAccessRightModel";
 import { UserDemographicModel } from "./UserDemographicModel";
+import { Mixin } from 'ts-mixer'
+import Mongoose from 'mongoose'
 
-export class UserModel extends AuditableModel {
+export class UserModel extends Mixin(AuditableModel, Mongoose.Schema) {
     constructor(
         public userId?: number,
         public code?: string,
