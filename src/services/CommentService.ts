@@ -1,38 +1,35 @@
-import * as express from 'express';
 import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
-import  { TaskSchema }  from '../schemas/TaskSchema'
-import { TaskModel } from '@/models/TaskModel'
+import CommentSchema from '@/schemas/CommentSchema'
+import { CommentModel } from '@/models/CommentModel'
 import { Envelop } from '@/models/Envelop';
-import { dbUrl } from '../config/Keys';
 
-export class TaskService {
+export class CommentService {
 
     public async GetAll() {
-        var db = Mongoose.connect(dbUrl);
-        var val = await TaskSchema.find();
-        var response = new Envelop(true, 1000001, val);
+        var val = new CommentSchema();
+        var response = new Envelop(true, 1000001, await val.find());
         console.log('Get All!');
         return response;
     }
 
     public async GetById(id: number) {
-        var val = new TaskSchema();
+        var val = new CommentSchema();
         var response = new Envelop(true, 1000001, await val.find({ taskId: id }));
         console.log('Get By Id!');
         return response;
     }
 
-    public async Save(task: TaskModel) {
+    public async Save(comment: CommentModel) {
         var response = new Envelop();
-        var val = new TaskSchema ({ title: task.title, description: task.description });
+        var val = new CommentSchema ({ title: comment.title });
         await val.Save();
         console.log('Saved!');
         return new Envelop ();
     }
 
     public async Remove(id: number) {
-        var val = new TaskSchema();
+        var val = new CommentSchema();
         var val2 = await val.find(id);
         await val2.Remove(id);
         console.log('Removed!');

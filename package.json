@@ -1,5 +1,6 @@
 {
   "name": "todo-typescript",
+  "author": "muhammad saad ahmed",
   "version": "0.1.0",
   "private": true,
   "scripts": {

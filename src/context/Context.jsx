@@ -6,3 +6,5 @@ const Context = () => {
     const [user, setUser] = useState([]);
 
 }
+
+export default Context;

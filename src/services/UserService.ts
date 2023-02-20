@@ -1,38 +1,35 @@
-import * as express from 'express';
 import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
-import  { TaskSchema }  from '../schemas/TaskSchema'
-import { TaskModel } from '@/models/TaskModel'
+import UserSchema from '@/schemas/UserSchema'
+import { UserModel } from '@/models/UserModel'
 import { Envelop } from '@/models/Envelop';
-import { dbUrl } from '../config/Keys';
 
 export class TaskService {
 
     public async GetAll() {
-        var db = Mongoose.connect(dbUrl);
-        var val = await TaskSchema.find();
-        var response = new Envelop(true, 1000001, val);
+        var val = new UserSchema();
+        var response = new Envelop(true, 1000001, await val.find());
         console.log('Get All!');
         return response;
     }
 
     public async GetById(id: number) {
-        var val = new TaskSchema();
+        var val = new UserSchema();
         var response = new Envelop(true, 1000001, await val.find({ taskId: id }));
         console.log('Get By Id!');
         return response;
     }
 
-    public async Save(task: TaskModel) {
+    public async Save(user: UserModel) {
         var response = new Envelop();
-        var val = new TaskSchema ({ title: task.title, description: task.description });
+        var val = new UserSchema ({ username: user.username });
         await val.Save();
         console.log('Saved!');
         return new Envelop ();
     }
 
     public async Remove(id: number) {
-        var val = new TaskSchema();
+        var val = new UserSchema();
         var val2 = await val.find(id);
         await val2.Remove(id);
         console.log('Removed!');
