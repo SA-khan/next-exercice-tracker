@@ -36,6 +36,11 @@ const Navigation = () => {
                             <Link className='text-white text-decoration-none p-2' href="/blogs/Index">Blogs</Link>
                         </th>
                     </tr>
+                    <tr className="table-row">
+                        <th className="table-col">
+                            <Link className='text-white text-decoration-none p-2' href="/exercise/Index">Exercise Tracking</Link>
+                        </th>
+                    </tr>
                 </tbody>
             </table>
        </div>
