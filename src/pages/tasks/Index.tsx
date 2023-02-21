@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import Head from 'next/head'
 import { TaskService } from "@/services/TaskService";
 
-const GetAllTasks = () => {
+const Index = () => {
     const envelop = {
         isSuccessful: true,
         responseMessage: 1000001,
@@ -192,8 +192,8 @@ const GetAllTasks = () => {
         ]
     };
     const tasks = envelop.content;
-    const service = new TaskService();
-    console.log(service.GetAll());
+    //const service = new TaskService();
+    //console.log(service.GetAll());
     return <div>
             <Head>
                 <title>Excercise App - Tasks</title>
@@ -231,4 +231,4 @@ const GetAllTasks = () => {
         </div>;
 }
 
-export default GetAllTasks;
+export default Index;

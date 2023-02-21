@@ -10,8 +10,8 @@ export class TaskService {
 
     public async GetAll() {
         var db = Mongoose.connect(dbUrl);
-        var val = await TaskSchema.find();
-        var response = new Envelop(true, 1000001, val);
+        var val = new TaskSchema;
+        var response = new Envelop(true, 1000001, val.find());
         console.log('Get All!');
         return response;
     }

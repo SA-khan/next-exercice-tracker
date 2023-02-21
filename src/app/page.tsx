@@ -1,21 +1,45 @@
+import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Script from 'next/script'
 import Layout from '../components/Layout'
+import Image from 'next/image'
+import PageHeading from '../components/shared/PageHeading'
 
 export default function Home() {
   return (
-      <div>
+      <React.Fragment className="w-100">
         <Head>
-          <title>Exercise App - Index</title>
+          <title>Exercise App - Home</title> 
         </Head>
         <Layout>
-            <h2 className="bg-light text-dark p-2">Home</h2>
-            <div className="m-2 p-2">
-              <Link href='/tasks/GetAllTasks'>Goto Tasks</Link> <br/>
-              <Link href='/blogs/index'>Goto Blogs</Link>
-            </div>
+          <PageHeading title='Home' />  
+          <div className="bg-light h-95 w-100 p-2">
+              <Link className="text-decoration-none" href='/tasks/Index'>Goto Tasks</Link> <br/>
+              <Link className="text-decoration-none" href='/blogs/Index'>Goto Blogs</Link> <br/>
+              <Link className="text-decoration-none" href='/news/Index'>Goto News</Link> <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+          </div>
         </Layout>
-      </div>
+      </React.Fragment>
   )
 }
