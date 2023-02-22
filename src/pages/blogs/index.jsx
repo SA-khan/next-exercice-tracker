@@ -7,7 +7,7 @@ const Index = () => {
     return <React.Fragment>
         <div>
         <Layout>
-            <PageHeading title="Blogs Updates" />
+            <PageHeading title="Blogs Updates" source="blog.png" />
             <div>
                 <Image src="/images/snow.gif" width={400} height={400} />
             </div>

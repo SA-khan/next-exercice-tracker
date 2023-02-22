@@ -3,10 +3,12 @@ import { UserModel } from "./UserModel";
 import { Mixin } from 'ts-mixer'
 import Mongoose from 'mongoose'
 
-export class UserAccessRightModel extends Mixin(AuditableModel, Mongoose.Schema) {
+export class NewsTypeModel extends Mixin(AuditableModel, Mongoose.Schema) {
     constructor(
-        public userAccessRightId?: number,
-        public code?: string,
+        public newsTypeId?: number,
+        public title?: string,
+        public description?: string,
+        public imageUrl?: string,
         public user?: UserModel
     ) {
         super();

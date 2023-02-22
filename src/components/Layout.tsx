@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Header from './core/Header'
 import Footer from './shared/Footer'
 import Navigation from './Navigation'
+import styles from './layout.module.css';
+import utilStyles from '../styles/utils.module.css';
 
 const Layout = ({ children }:{children: React.ReactNode}) => {
     return <React.Fragment>
