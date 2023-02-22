@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import  utilStyles  from '../styles/utils.module.css'
 import { NewsModel } from '@/models/NewsModel';
+import { NewsTypeEnum } from "@/enums/NewsTypeEnum";
 
 const NewsReport = (news: NewsModel) => {
     return <React.Fragment>

@@ -6,7 +6,7 @@ import { WeatherModel } from '@/models/WeatherModel'
 const WeatherSummary = (weather: WeatherModel) => {
     return <React.Fragment>
         <div className='card p-2 mb-2'>
-            <Image priority className='card-img-top' src="/images/snow.gif" width={380} height={380} alt="weater image" />
+            <Image priority className='card-img-top' src={weather.city?.imageUrl} width={380} height={380} alt="weater image" />
             <div className='card-body'>
                 <h5 className={utilStyles.headingMd +' card-title'} > {weather.city?.name} - {weather.temperatureInFahrenheit} -  <kbd>{weather.temperatureInCelsius}</kbd> </h5>
                

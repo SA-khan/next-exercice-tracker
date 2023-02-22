@@ -12,9 +12,10 @@ export class CityModel extends Mixin(AuditableModel, Mongoose.Schema) {
         public name?: string,
         public title?: string,
         public symbol?: string,
+        public imageUrl?: string,
         public geo?: GeoCoordinateModel,
         public description?: string,
-        public countryId?: CountryModel,
+        public country?: CountryModel,
         public isActive?: boolean,
         public user?: UserModel
     ) {

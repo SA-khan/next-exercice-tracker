@@ -8,8 +8,8 @@ export class GeoCoordinateModel extends Mixin(AuditableModel, Mongoose.Schema) {
         public geoCoordinateModelId?: number,
         public title?: string,
         public description?: string,
-        public Longitude?: string,
-        public Latitude?: string,
+        public Longitude?: number,
+        public Latitude?: number,
         public imageUrl?: string,
         public isActive?: boolean,
         public user?: UserModel

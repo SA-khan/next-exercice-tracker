@@ -11,8 +11,8 @@ export class RegionModel extends Mixin(AuditableModel, Mongoose.Schema) {
         public name?: string,
         public description?: string,
         public imageUrl?: string,
-        public isActive?: boolean,
-        public geo?: GeoCoordinateModel
+        public geo?: GeoCoordinateModel,
+        public isActive?: boolean
     ) {
         super();
     }
