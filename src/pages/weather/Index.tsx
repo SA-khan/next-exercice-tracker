@@ -28,9 +28,9 @@ const Index = () => {
         <Layout>
             <PageHeading title="Weather Updates" source="weather.jfif" />
             <WeatherNavigation />
-            <div>
-                <WeatherSummary {...weather}  />
-            </div>
+            <>
+                <WeatherSummary   {...weather}/>
+            </>
         </Layout>
     </React.Fragment>;
 }

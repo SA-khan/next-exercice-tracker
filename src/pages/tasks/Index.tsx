@@ -192,8 +192,8 @@ const Index = () => {
         ]
     };
     const tasks = envelop.content;
-    //const service = new TaskService();
-    //console.log(service.GetAll());
+    const service = new TaskService();
+    service.GetAll().then(()=>{console.log("asdasd")}).catch((err)=>{console.log("asdasdscdfasdfdafdas")});
     return <div>
             <Head>
                 <title>Excercise App - Tasks</title>
