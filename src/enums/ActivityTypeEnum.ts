@@ -1,5 +1,5 @@
 export enum ActivityTypeEnum {
-    Run,
+    Run = 1,
     Bicycle_Ride,
     Swim,
     Walk,

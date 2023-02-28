@@ -1,0 +1,17 @@
+.container {
+    /* Background pattern from Toptal Subtle Patterns */
+   background-image: url("/images/exercise/exercise.jpg");
+   height: 500px;
+   width: 100%;
+}
+
+.login {
+    opacity:1.0;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register {
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

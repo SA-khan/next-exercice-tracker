@@ -3,197 +3,14 @@ import Script from 'next/script'
 import Layout from "../../components/Layout";
 import Head from 'next/head'
 import { TaskService } from "@/services/TaskService";
+import { TaskModel } from "@/models/TaskModel";
 
 const Index = () => {
-    const envelop = {
-        isSuccessful: true,
-        responseMessage: 1000001,
-        content: [
-            {
-                taskId: 1,
-                title: 'First',
-                description: 'First Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 2,
-                title: 'Second',
-                description: 'Second Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 3,
-                title: 'Third',
-                description: 'Third Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 4,
-                title: 'Fourth',
-                description: 'Fourth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 5,
-                title: 'Fifth',
-                description: 'Fifth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 6,
-                title: 'Sixth',
-                description: 'Sixth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 7,
-                title: 'Seventh',
-                description: 'Seventh Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 8,
-                title: 'Eighth',
-                description: 'Eighth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 9,
-                title: 'Ninth',
-                description: 'Ninth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 10,
-                title: 'Tenth',
-                description: 'Tenth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 11,
-                title: 'Eleventh',
-                description: 'Eleventh Task',
-                isActive: false,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 12,
-                title: 'Twelveth',
-                description: 'Eleventh Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 13,
-                title: 'Thirteenth',
-                description: 'Thirteenth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 14,
-                title: 'Fourteenth',
-                description: 'Fourteenth Task',
-                isActive: true,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-            {
-                taskId: 15,
-                title: 'Fifteenth',
-                description: 'Fifteenth Task',
-                isActive: false,
-                createdBy: 'admin',
-                createdOn: '2023-02-16',
-                modifiedBy: 'admin',
-                modifiedOn: '2023-02-16',
-                version: 1,
-                isDeleted: false 
-            },
-        ]
-    };
-    const tasks = envelop.content;
+    let envelop = new TaskService();
+    const response = envelop.GetAllTasks();
+    let tasks = response.content;
     const service = new TaskService();
-    service.GetAll().then(()=>{console.log("asdasd")}).catch((err)=>{console.log("asdasdscdfasdfdafdas")});
+    service.GetAll().then(()=>{console.log("connected")}).catch((err)=>{console.log(err)});
     return <div>
             <Head>
                 <title>Excercise App - Tasks</title>
@@ -211,7 +28,7 @@ const Index = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {tasks.map((task)=>(
+                        {tasks.map((task: TaskModel)=>(
                                 <tr id={"row-"+task.taskId} className="w-100 table-row tr">
                                 <td className="col-md-2 float-right align-right">{task.taskId}.</td>
                                 <td className="col-md-2">{task.title}</td>

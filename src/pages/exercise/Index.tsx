@@ -1,10 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import exerciseStyle from './'
+import exerciseStyle from './exercise.module.css'
 import Layout from '../../components/Layout'
 import PageHeading from '../../components/shared/PageHeading'
-import SaveExerciseTrackerComponent from '../../components/exercise-tracker/SaveExerciseTrackerComponent'
+import SaveExerciseTrackerComponent from '../../components/exercise-tracker/AddActitvity'
 import ExerciseTrackerNavigation from '../../components/exercise-tracker/ExerciseTrackerNavigation'
+import ExerciseTrackerTheme from '@/components/exercise-tracker/ExerciseTrackerTheme'
 
 const Index = () => {
     return <React.Fragment>
@@ -12,10 +13,7 @@ const Index = () => {
         <Layout>
             <PageHeading title="Excercise Tracking Updates" source="exercise.jfif" />
             <ExerciseTrackerNavigation />
-            <div>
-                <Image src={"/images/exercise/exercise_tracking_bg.jfif"} width={900} height={604} alt="exercise" />
-                <SaveExerciseTrackerComponent />
-            </div>
+            <ExerciseTrackerTheme />
         </Layout>
         </div>
     </React.Fragment>;
