@@ -1,0 +1,1 @@
+https://api.aladhan.com/v1/timingsByCity/04-03-2023?city=Karachi&country=Pakistan&method=8

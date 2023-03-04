@@ -1,0 +1,10 @@
+API Key is 636dfd74d557f3aceda16246ae1b55de
+
+Your API key is 636dfd74d557f3aceda16246ae1b55de
+
+
+Weather API => Key 636dfd74d557f3aceda16246ae1b55de
+
+http://api.weatherapi.com/v1/current.json?key=0ba6688f853249878b6104809230403&q=Karachi&aqi=yes
+
+18 march 2023 end time

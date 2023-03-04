@@ -13,7 +13,7 @@ const Navigation = () => {
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/login">Login</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/prayer">Prayer Time</Link>
                         </th>
                     </tr>
                     <tr className="table-row">

@@ -101,3 +101,11 @@
     background-position: center;
     background-size: cover;
   }
+
+  .pr_background {
+    background-image: url('/images/beautiful_view.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
