@@ -7,13 +7,13 @@ import { TaskModel } from '@/models/TaskModel'
 import { ActivityTypeEnum } from '@/enums/ActivityTypeEnum'
 
 const AddActivity = () => {
-    var task: TaskModel = new TaskModel()
-    const [title, setTitle] = useState("")
-    const [description, setDescription] = useState("")
-    const [activityType, setActivityType] = useState(0)
+    var task: TaskModel = new TaskModel();
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [activityType, setActivityType] = useState("");
     var activityTypeList = Object.keys(ActivityTypeEnum).filter((type)=> { return isNaN(Number(type)) } );
-    const [duration, setDuration] = useState("")
-    const [date, setDate] = useState("")
+    const [duration, setDuration] = useState("");
+    const [date, setDate] = useState("");
     return <React.Fragment>
             <div className='card p-2 mb-2'>
                 <h2 className="h2 m-2 p-2 bg-dark text-white">Add Activity Form</h2>
@@ -30,10 +30,11 @@ const AddActivity = () => {
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='activityType'>Activity Type</label></div>
                                 <div className='col'><select value={activityType} placeholder="Selcet Activity Type" onChange={(e)=>setActivityType(e.target.value)} required>
+                                    <option>Select type..</option>
                                     {
-                                        activityTypeList.map((type) => (
-                                            <option value={type}>{type}</option>
-                                        );
+                                        activityTypeList.map(i => (
+                                            <option>{i}</option>
+                                        ))
                                     }
                                     </select></div>
                             </div>

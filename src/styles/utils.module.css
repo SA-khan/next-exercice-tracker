@@ -15,6 +15,7 @@
   }
   
   .headingLg {
+    vertical-align: middle;
     font-size: 1.5rem;
     line-height: 1.4;
     margin: 1rem 0;
@@ -49,4 +50,54 @@
   
   .lightText {
     color: #666;
+  }
+
+  .fonts {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .carder {
+    width: 100%;
+  }
+
+  .weather_view {
+    background-image: url('/images/regions/regions.png');
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+  }
+
+  .country_view {
+    vertical-align: middle;
+    background-image: url('/images/countries/other.png');
+    background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 50px;
+  }
+
+  .globe_view {
+    width: 100px;
+    height: 100px;
+    float: right;
+    background-image: url('/images/regions/globe.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .country_map {
+    opacity: 0.6;
+    width: 200px;
+    height: 150px;
+    float: left;
+    position: relative;
+    bottom: 2px;
+    background-image: url('/images/coordinates/coordinates.png');
+    background-position: center;
+    background-size: cover;
   }

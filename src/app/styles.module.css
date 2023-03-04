@@ -1,0 +1,19 @@
+.container {
+    background-image: url('/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+}
+
+.time {
+    font-size: 94px;
+    color: white;
+    float: right;
+    bottom: 5px;
+    margin: 30px;
+    padding: 4px;
+    position: absolute;
+    bottom: 30px;
+    text-shadow: 2px;
+}

@@ -2,12 +2,5 @@ import { TaskModel } from '@/models/TaskModel'
 import Mongodb from 'mongodb'
 import mongoose from 'mongoose'
 
-let TaskSchema;
+export const TaskSchema = mongoose.model('task', new TaskModel())
 
-try {
-    TaskSchema = mongoose.model('task')
-  } catch (error) {
-    TaskSchema = mongoose.model('task', new TaskModel())
-  }
-
-export default TaskSchema;

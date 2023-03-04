@@ -1,7 +1,7 @@
 import * as express from 'express';
 import mongoose from 'mongoose'
 // import MongoDb from 'mongodb'
-import  TaskSchema  from '../schemas/TaskSchema'
+import  { TaskSchema }  from '../schemas/TaskSchema'
 import { TaskModel } from '@/models/TaskModel'
 import { Envelop } from '@/models/Envelop';
 import {dbUrl} from '../config/Keys';

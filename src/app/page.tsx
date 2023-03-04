@@ -5,40 +5,36 @@ import Script from 'next/script'
 import Layout from '../components/Layout'
 import Image from 'next/image'
 import PageHeading from '../components/shared/PageHeading'
+import Styles from '../app/styles.module.css'
 
 export default function Home() {
+  function addZero(i) {
+    if (i < 10) {i = "0" + i}
+    return i;
+  }
+  
+  const d = new Date();
+  let h = addZero(d.getHours());
+  let m = addZero(d.getMinutes());
+  let s = addZero(d.getSeconds());
+  let symbol = h / 12 > 0 ? 'pm' : 'am' 
+  let time = h % 12 + ":" + m;
   return (
-      <React.Fragment className="w-100">
+      <React.Fragment>
         <Head>
           <title>Exercise App - Home</title> 
         </Head>
         <Layout>
-          <PageHeading title='Home' />  
-          <div className="bg-light h-95 w-100 p-2">
-              <Link className="text-decoration-none" href='/tasks/Index'>Goto Tasks</Link> <br/>
-              <Link className="text-decoration-none" href='/blogs/Index'>Goto Blogs</Link> <br/>
-              <Link className="text-decoration-none" href='/news/Index'>Goto News</Link> <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-          </div>
+          <div className='card shadow p-2 mt-2 mb-2'>
+            <PageHeading title='Home' source='home.jfif' />  
+            
+            <div className={Styles.container}>
+              <h1>
+                <div className={Styles.time}>{time} {symbol}</div>
+              </h1>
+            </div>
+
+            </div>
         </Layout>
       </React.Fragment>
   )
