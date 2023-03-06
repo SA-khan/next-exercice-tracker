@@ -1,5 +1,5 @@
-export class PrayerHijriModel {
-    constructor(
+export class PrayerGregorianModel {
+    constructor (
         public date?: string,
         public format?: string,
         public day?: string,
@@ -7,6 +7,5 @@ export class PrayerHijriModel {
         public month?: any,
         public year?: string,
         public designation?: any,
-        public holidays?: any,
-    ) { }
+    ) {  }
 }
