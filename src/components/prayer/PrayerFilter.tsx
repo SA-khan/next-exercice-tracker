@@ -1,8 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { PrayerService } from '@/services/PrayerService';
+import { PrayerModel } from '@/models/PrayerModel';
+import PrayerComponent from './PrayerComponent';
+let response = new PrayerService().GetLatestPrayerTime();
 
-const PrayerFilter = () => {
-    const [city, setCity] = useState("")
-    const [country, setCountry] = useState("")
+const PrayerFilter = ({cityParam, countryParam} : {cityParam: string, countryParam: string}) => {
+    const [city, setCity] = useState(cityParam)
+    const [country, setCountry] = useState(countryParam)
+    const [prayer, setPrayer] = useState(new PrayerModel());
+
+    useEffect(() => {
+        const call = async () => { 
+            var data = response.then((x) => setPrayer(x))
+        }
+        call()
+    });
 
     const handleClickGo = () => {
         console.log(city + ', ' + country)
