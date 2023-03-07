@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Image from 'next/image'
 import PageHeading from '../components/shared/PageHeading'
 import Styles from '../app/styles.module.css'
+import { createStore } from 'redux'
 
 export default function Home() {
   function addZero(i) {
