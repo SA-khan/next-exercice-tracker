@@ -1,5 +1,5 @@
 import { RatingModel } from '@/models/RatingModel'
-import  Mongoose  from 'mongoose'
 import Mongodb from 'mongodb'
+import mongoose from 'mongoose';
 
-export default Mongoose.model('rating', new RatingModel());
+export default mongoose.models.rating || mongoose.model('rating', new RatingModel());

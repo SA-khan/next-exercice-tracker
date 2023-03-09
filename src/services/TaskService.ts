@@ -1,16 +1,17 @@
-import * as express from 'express';
 import mongoose from 'mongoose'
 // import MongoDb from 'mongodb'
 import  { TaskSchema }  from '../schemas/TaskSchema'
 import { TaskModel } from '@/models/TaskModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop  from '@/models/Envelop';
 import {dbUrl} from '../config/Keys';
 
 export class TaskService {
 
     public async GetAll() {
         await mongoose.connect(dbUrl).then(()=>{console.log("Connected")}).catch(()=>{console.log("Not Connected")});
-        var response = new Envelop(true, 1000001, TaskSchema.find());
+        var query = await TaskSchema.find();
+        console.log(query)
+        var response = new Envelop(true, 1000001, query);
         console.log('Get All!');
         return response;
     }

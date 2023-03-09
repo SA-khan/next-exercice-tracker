@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
 import styles from './ExerciseTracker.module.css'
+import { ExerciseTrackerService } from '@/services/ExerciseTrackerService'
+import RegistrationModel from '@/models/RegistrationModel'
 
 const RegisterForm = () => {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [passcode, setPasscode] = useState("")
+    const registerHandler = (e: Event) => {
+        e.preventDefault();
+        console.log("user id: " + username + "email id: " + email+ ", passcode: " + passcode);
+        let model : RegistrationModel = new RegistrationModel(1, username, email, passcode);
+        let response = (new ExerciseTrackerService()).Registration(model); 
+        console.log(response);
+    }
     return <React.Fragment>
         <div className={styles.register}>
         <h2 className='h2 m-2 p-2'>Register Form</h2>
@@ -20,11 +29,11 @@ const RegisterForm = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='passcode'>Password</label></div>
-                                <div className='col'><input value={passcode} placeholder="Enter password" onChange={(e)=>setPasscode(e.target.value)} required /></div>
+                                <div className='col'><input type='password' value={passcode} placeholder="Enter password" onChange={(e)=>setPasscode(e.target.value)} required /></div>
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='save'></label></div>
-                                <div className='col'><button className='btn btn-primary bg-primary mt-2 p-2' onClick={()=>console.log("user id: " + username + "email id: " + email+ ", passcode: " + passcode)}>Register</button></div>
+                                <div className='col'><button className='btn btn-primary bg-primary mt-2 p-2' onClick={(e)=>registerHandler(e)}>Register</button></div>
                             </div>
                         </div>
                     </form>

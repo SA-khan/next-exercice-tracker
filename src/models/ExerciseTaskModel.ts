@@ -4,7 +4,7 @@ import { UserModel } from "./UserModel";
 import { Mixin } from 'ts-mixer'
 import Mongoose from 'mongoose'
 
-export class ExerciseTaskModel extends Mixin(AuditableModel, Mongoose.Schema) {
+class ExerciseTaskModel extends Mixin(AuditableModel, Mongoose.Schema) {
     constructor(
         public exerciseTrackerId?: number,
         public title?: string,
@@ -16,3 +16,5 @@ export class ExerciseTaskModel extends Mixin(AuditableModel, Mongoose.Schema) {
         super();
     }
 }
+
+export default ExerciseTaskModel;
