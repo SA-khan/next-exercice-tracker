@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Layout from '../../components/Layout'
 import PageHeading from '../../components/shared/PageHeading'
-import NewsReport from '../../components/NewsReport'
 import { NewsModel } from '../../models/NewsModel'
 import { NewsTypeModel } from '../../models/NewsTypeModel'
 import { NewsTypeEnum } from "@/enums/NewsTypeEnum";
