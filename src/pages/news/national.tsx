@@ -11,7 +11,6 @@ const National = () => {
         <Layout>
             <PageHeading title="News Updates" source="news.png" />
             <NewsNavigation />
-            <h2 className='mt-2 mb-2'>National News</h2>
             <div>
                 <NationalComponent />
             </div>

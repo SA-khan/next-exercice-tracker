@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Navigation = () => {
     return  <React.Fragment>
         <div className="bg-dark h-100 w-100">
-            <table className="table table-sm table-striped h-100 w-100">
+            <table className="table table-sm table-striped w-100">
                 <tbody>
                     <tr className="table-row">
                         <th className="table-col">

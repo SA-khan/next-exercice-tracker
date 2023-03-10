@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 import { WeatherService } from '@/services/WeatherService';
 import { WeatherModel } from '@/models/WeatherModel';
 import Image from 'next/image'
