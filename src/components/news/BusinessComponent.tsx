@@ -7,9 +7,9 @@ import { NewsArticleModel } from '@/models/NewsArticleModel';
 import NewsReport from './NewsReport';
 import Link from 'next/link'
 import { NewsService } from '@/services/NewsService';
-let api_call = (new NewsService()).GetGNews('health');
+let api_call = (new NewsService()).GetGNews('business');
 
-const HealthComponent = (news: NewsArticleModel[]) => {
+const BusinessComponent = (news: NewsArticleModel[]) => {
 
     const [articles, setArticles] = useState<NewsArticleModel[] | undefined>()
 
@@ -38,4 +38,4 @@ const HealthComponent = (news: NewsArticleModel[]) => {
     </React.Fragment>;
 }
 
-export default HealthComponent;
+export default BusinessComponent;

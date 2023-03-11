@@ -8,6 +8,7 @@ export class NewsArticleModel {
         public description?: string,
         public url?: string,
         public urlToImage?: string,
+        public image?: string,
         public publishedAt?: string,
         public content?: string
     ) {  }

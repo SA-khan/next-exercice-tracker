@@ -11,6 +11,7 @@ const NewsNavigation = () => {
             <Link className='text-decoration-none' href='/news/breaking'>Breaking</Link> | 
             <Link className='text-decoration-none' href='/news/national'> National</Link> | 
             <Link className='text-decoration-none' href='/news/worldwide'> Worldwide</Link> | 
+            <Link className='text-decoration-none' href='/news/business'> Business</Link> | 
             <Link className='text-decoration-none' href='/news/technology'> Technology</Link> | 
             <Link className='text-decoration-none' href='/news/health'> Health</Link> | 
             <Link className='text-decoration-none' href='/news/lifestyle'> Lifestyle</Link> | 

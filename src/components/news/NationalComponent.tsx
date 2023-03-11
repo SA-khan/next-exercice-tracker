@@ -24,21 +24,22 @@ const NationalComponent = () => {
             <h2 className='mt-2 mb-2 p-2 bg-warning text-center'>National News</h2>
             <div className='overflow-scrollable'>
                 <div className="border border-light bg-info p-1 strong">
-                    <marquee>{articles?.[0].title + ' ▣ ' + articles?.[1].title + ' ▣ ' + articles?.[2].title + ' - ' + articles?.[3].title + ' - ' + articles?.[4].title + ' - ' + articles?.[5].title + ' - ' + articles?.[6].title + ' - ' + articles?.[7].title + ' - ' + articles?.[8].title + ' - ' + articles?.[9].title + ' - ' + articles?.[10].title }</marquee>
+                    <marquee>{articles?.[0].title ?? '' + ' ▣ ' + articles?.[1].title ?? '' + ' ▣ ' + articles?.[2].title + ' - ' + articles?.[3].title + ' - ' + articles?.[4].title + ' - ' + articles?.[5].title + ' - ' + articles?.[6].title + ' - ' + articles?.[7].title + ' - ' + articles?.[8].title + ' - ' + articles?.[9].title + ' - ' + articles?.[10].title }</marquee>
                 </div>
                     <hr />  
                     <div className='card'>
                         <div className='row p-3'>
-                            <div className='col-8 text-center'>
-                                <p id='news_title' className='mark p-2'>{articles?.[0].title ?? 'Waiting..'}</p>
+                            <div className='col-8'>
+                                <p id='news_title' className='text-center mark p-2'>{articles?.[0].title ?? 'Waiting..'}</p>
                                 <hr />
-                                <p id='news_description' className='small lead bg-light h-50'> {articles?.[0].description ?? 'Waiting..'}<a className='text-decoration-none small' href={articles?.[0].url}>Read more</a></p>
+                                <p id='news_description' className='small lead bg-light'> {articles?.[0].description ?? 'Waiting..'}</p>
+                                <p id='news_content' className='small lead bg-light'> {articles?.[0].content ?? 'Waiting..'}<a className='text-decoration-none small' href={articles?.[0].url}> Read more</a></p>
                                 <hr />
-                                <p id='news_description' className='small lead bg-light float-right'><small> Publish Date: {articles?.[0].publishedAt?.replace('T', ' ').replace('Z','')}</small></p>
+                                <p id='news_description' className='small lead bg-white float-end'><small> Published at: <strong>{articles?.[0].publishedAt?.replace('T', ' ').replace('Z','')}</strong></small></p>
                             </div>
                             <div className='col-4'>
                                 <div className='row text-center bg-light p-2'>
-                                    <img src={articles?.[0].urlToImage ?? '/images/news.png'} width={200} height={200} alt="headline image" />
+                                    <img src={articles?.[0].image ?? '/images/news.png'} width={200} height={200} alt="headline image" />
                                 </div>
                                 <hr />
                                 <div className='row no-gutters bg-light'>
@@ -46,7 +47,7 @@ const NationalComponent = () => {
                                         <blockquote className='text-muted m-2'> Source </blockquote>
                                     </div>
                                     <div className='col'>
-                                        <p className='bg-light strong m-2'> {articles?.[0].source?.name } </p>
+                                        <p className='bg-light strong m-2'> <a className='text-decoration-none' target='_blank' href={articles?.[0].source?.url}>{articles?.[0].source?.name }</a> </p>
                                     </div>
                                 </div>
                             </div>
@@ -56,17 +57,17 @@ const NationalComponent = () => {
                 <div className='text-center'>
                     <div className='row'>
                         <div className='col-4'>
-                            <div className='card shadow'>
+                            <div className='card shadow p-2'>
                                 <div className='row no-gutters'>
-                                    <div className='col-3 text-center bg-light mx-3'>
-                                        <Image className='p-2' src={articles?.[1].urlToImage} width={80} height={80} alt='news 1 logo' />
+                                    <div className='col-4 text-center bg-light p-3'>
+                                        <img className='' src={articles?.[1].image ?? '/images/news.png'} width={90} height={80} alt='news 1 logo' />
                                     </div>
-                                    <div className='col'>
-                                        <div className='row mx-2'>
-                                            <p className='mark mt-1'>{articles?.[1].title} </p>
+                                    <div className='col p-2'>
+                                        <div className='row'>
+                                            <p className='mark'>{articles?.[1].title} </p>
                                         </div>
-                                        <div className='row bg-light mx-2'>
-                                            <p className='mb-2'>{articles?.[1].description} </p>
+                                        <div className='row bg-light'>
+                                            <p className='mb-2'>{articles?.[1].description} <a target='_blank' href={articles?.[1].url}> read more</a> </p>
                                         </div>
                                     </div>
                                 </div>
@@ -76,7 +77,7 @@ const NationalComponent = () => {
                         <div className='card shadow'>
                                 <div className='row no-gutters'>
                                     <div className='col-3 text-center bg-light mx-3'>
-                                        <Image className='p-2' src='/images/news.png' width={80} height={80} alt='news 1 logo' />
+                                        <img className='p-2' src={articles?.[2].image ?? '/images/news.png'} width={80} height={80} alt='news 1 logo' />
                                     </div>
                                     <div className='col'>
                                         <div className='row mx-2'>

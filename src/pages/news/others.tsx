@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '@/components/Layout';
 import PageHeading from '@/components/shared/PageHeading';
 import NewsNavigation from '@/components/news/NewsNavigation';
-import OthersComponent from '@/components/news/Others.Component';
+import OthersComponent from '@/components/news/OthersComponent';
 
 const Others = () => {
     return <React.Fragment>

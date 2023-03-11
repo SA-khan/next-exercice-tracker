@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from 'react'
 import mongoose from 'mongoose'
-// import MongoDb from 'mongodb'
 import  { TaskSchema }  from '../schemas/TaskSchema'
 import { TaskModel } from '@/models/TaskModel'
 import Envelop  from '@/models/Envelop';
@@ -7,8 +7,17 @@ import {dbUrl} from '../config/Keys';
 
 export class TaskService {
 
+    public task ?: TaskModel
+    public tasks ?: TaskModel[] = []
+
     public async GetAll() {
-        await mongoose.connect(dbUrl).then(()=>{console.log("Connected")}).catch(()=>{console.log("Not Connected")});
+        let connection = await mongoose.connect(dbUrl)
+        .then(()=>{
+            console.log("Connected")
+            var query = TaskSchema.find().then((x) => this.tasks?.push(x));
+        }).catch(()=>{
+            console.log("Not Connected")
+        });
         var query = await TaskSchema.find();
         console.log(query)
         var response = new Envelop(true, 1000001, query);

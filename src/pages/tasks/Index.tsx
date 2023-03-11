@@ -1,22 +1,25 @@
 import Link from "next/link";
-import Script from 'next/script'
+import Script from 'next/script' 
+import Image from 'next/image'
 import Layout from "../../components/Layout";
 import Head from 'next/head'
 import { TaskService } from "@/services/TaskService";
 import { TaskModel } from "@/models/TaskModel";
 
 const Index = () => {
-    let envelop = new TaskService();
-    const response = envelop.GetAllTasks();
-    let tasks = response.content;
     const service = new TaskService();
+    const response = service.GetAllTasks();
+    let tasks = response.content;
     service.GetAll().then(()=>{console.log("connected")}).catch((err)=>{console.log(err)});
     return <div>
             <Head>
                 <title>Excercise App - Tasks</title>
             </Head>
             <Layout>
-                <h2>Tasks - Index Page</h2>
+                <div>
+                    <Image className="m-2" src='/images/task.png' width={40} height={40} alt="task logo" />
+                    <h2 className="d-inline mx-2 text-center"> Tasks</h2>
+                </div>
                 <table className="table table-sm table-striped table-hover bg-white w-100 p-1">
                     <thead className="bg-dark text-white w-100">
                         <tr className="table-row tr w-100">
