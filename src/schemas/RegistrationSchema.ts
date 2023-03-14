@@ -10,6 +10,4 @@ const RegistrationSchema = () => {
     })
 }
 
-if(mongoose.models.ExerciseRegistration === undefined) { mongoose.model('ExerciseRegistration', RegistrationSchema()) } 
-
-export default mongoose.models.ExerciseRegistration ;
+export default mongoose.models.ExerciseRegistration === undefined ?  mongoose.model('ExerciseRegistration', RegistrationSchema()) : mongoose.models.ExerciseRegistration ;
