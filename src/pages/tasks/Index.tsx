@@ -3,14 +3,16 @@ import Script from 'next/script'
 import Image from 'next/image'
 import Layout from "../../components/Layout";
 import Head from 'next/head'
+import Envelop from "@/models/Envelop";
 import { TaskService } from "@/services/TaskService";
 import { TaskModel } from "@/models/TaskModel";
 
 const Index = () => {
     const service = new TaskService();
-    const response = service.GetAllTasks();
-    let tasks = response.content;
-    service.GetAll().then(()=>{console.log("connected")}).catch((err)=>{console.log(err)});
+    var response : Envelop = new Envelop();
+    service.GetAll().then(x => response = x);
+    console.log(response);
+    let tasks = service.GetAllTasks().content;
     return <div>
             <Head>
                 <title>Excercise App - Tasks</title>

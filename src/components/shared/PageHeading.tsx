@@ -1,7 +1,9 @@
+'use client';
+
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-const PageHeading = ({title, source}) => {
+const PageHeading = ({title, source} : {title: string, source: string}) => {
 
     const [keyword, setKeyword] = useState("")
 

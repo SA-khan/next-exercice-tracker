@@ -3,10 +3,32 @@ import Link from 'next/link'
 import Layout from '../Layout';
 import ExerciseLayout from './ExerciseLayout';
 import styles from './ExerciseTracker.module.css'
+import { ExerciseTrackerService } from '@/services/ExerciseTrackerService';
+import LoginModel from '@/models/LoginModel';
 
 const ExerciseTracker_LoginForm = () => {
-    const [userId, setUserId] = useState("")
-    const [passcode, setPasscode] = useState("")
+
+    const [userId, setUserId] = useState("");
+    const [passcode, setPasscode] = useState("");
+    const [rememberMe, setRememberMe] = useState(true);
+
+    const handleCheck = (e: Event) => {
+        e.preventDefault();
+        setRememberMe(!rememberMe);
+        console.log(rememberMe);
+        var checkBox = document.getElementById("rememberMeCheckbox");
+        checkBox.checked = rememberMe;
+    }
+
+    const handleLogin = (e: Event) => {
+        e.preventDefault();
+        console.log("user id: " + userId + ", passcode: " + passcode, ", remember me: " + rememberMe);
+        const model = new LoginModel(userId, passcode, rememberMe);
+        const service = new ExerciseTrackerService();
+        let exist = service.Login(model);
+        console.log(exist);
+    }
+
     return <React.Fragment>
                 <div className={styles.login}>
                     <h2 className='h2 m-2 p-2'>Login Form</h2>
@@ -21,8 +43,12 @@ const ExerciseTracker_LoginForm = () => {
                                 <div className='col'><input value={passcode} placeholder="Enter password" onChange={(e)=>setPasscode(e.target.value)} required /></div>
                             </div>
                             <div className='row no-gutters m-2'>
+                                <div className='col-3'><label htmlFor='rememberMe'>Remember me</label></div>
+                                <div className='col'><input id='rememberMeCheckbox' type='checkbox' checked={rememberMe} onClick={(e)=>handleCheck(e)} required /></div>
+                            </div>
+                            <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='save'></label></div>
-                                <div className='col'><button className='btn btn-primary bg-primary mt-2 p-2' value="Login" onClick={()=>console.log("user id: " + userId + ", passcode: " + passcode)}>Login</button></div>
+                                <div className='col'><button className='btn btn-primary bg-primary mt-2 p-2' value="Login" onClick={(e)=>handleLogin(e)}> Login </button></div>
                             </div>
                         </div>
                     </form>

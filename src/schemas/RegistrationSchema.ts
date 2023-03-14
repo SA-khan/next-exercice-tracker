@@ -10,4 +10,4 @@ const RegistrationSchema = () => {
     })
 }
 
-export default RegistrationSchema;
+export default mongoose.models.ExerciseRegistration || mongoose.model('ExerciseRegistration', RegistrationSchema());

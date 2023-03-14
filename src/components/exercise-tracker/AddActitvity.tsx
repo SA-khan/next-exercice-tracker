@@ -5,15 +5,27 @@ import { WeatherModel } from '@/models/WeatherModel'
 import ExerciseLayout from './ExerciseLayout'
 import { TaskModel } from '@/models/TaskModel'
 import { ActivityTypeEnum } from '@/enums/ActivityTypeEnum'
+import { ExerciseTrackerService } from '@/services/ExerciseTrackerService'
+import ExerciseTaskModel from '@/models/ExerciseTaskModel'
 
 const AddActivity = () => {
     var task: TaskModel = new TaskModel();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [activityType, setActivityType] = useState("");
+    const [activityType, setActivityType] = useState(ActivityTypeEnum.Bicycle_Ride);
     var activityTypeList = Object.keys(ActivityTypeEnum).filter((type)=> { return isNaN(Number(type)) } );
     const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
+
+    const handleAdd = (e) => {
+        e.preventDefault();
+        console.log("Title: " + title + ", Description: " + description + ", Duration: " + duration + ', Date: ' + date);
+        const service = new ExerciseTrackerService();
+        const model = new ExerciseTaskModel(1, title, description, activityType, duration, date);
+        const add = service.CreateActivity(model);
+        console.log("model successfully saved: "+ add);
+    }
+
     return <React.Fragment>
             <div className='card p-2 mb-2'>
                 <h2 className="h2 m-2 p-2 bg-dark text-white">Add Activity Form</h2>
@@ -48,7 +60,7 @@ const AddActivity = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='add'></label></div>
-                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={()=>console.log("Title: " + title + ", Description: " + description + ", Duration: " + duration + ', Date: ' + date)}>ADD</button></div>
+                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleAdd(e)}>ADD</button></div>
                             </div>
                     </div>
                 </form>
