@@ -1,6 +1,7 @@
 import React from 'react';
+import { Action } from 'redux';
 
-const IsLoggedReducer = (state = false, action) => {
+const IsLoggedReducer = (state = false, action : Action) => {
     switch(action.type) {
         case 'IsLoggedIn':
             return !state;
