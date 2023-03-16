@@ -1,12 +1,20 @@
-import { Envelop } from "@/models/Envelop";
+import  Envelop  from "@/models/Envelop";
 import { WeatherModel } from "@/models/WeatherModel";
 
+const KEY = process.env.WEATHERAPI_KEY
+
 export class WeatherService {
-    constructor() {  }
+    constructor() { 
+
+     }
     public async GetLatestWeatherUpdates(city: string = 'Karachi') : Promise<WeatherModel> {
-        var data: WeatherModel = await fetch("http://api.weatherapi.com/v1/current.json?key=0ba6688f853249878b6104809230403&q="+city+"&aqi=yes")
+        if (!KEY) {
+            throw new Error(
+              'Please define the MONGODB_URI environment variable inside .env.local'
+            )
+        }
+        var data: WeatherModel = await fetch("http://api.weatherapi.com/v1/current.json?key="+KEY+"&q="+city+"&aqi=yes")
                         .then((x) => x.json() );
-        console.log(data);
         return data;
     }
 }

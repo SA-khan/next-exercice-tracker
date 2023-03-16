@@ -1,11 +1,16 @@
 .container {
     /* Background pattern from Toptal Subtle Patterns */
    background-image: url("/images/exercise/exercise.jpg");
-   height: 500px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   min-height: 620px;
    width: 100%;
+   padding: 15px;
 }
 
 .login {
+    min-width: 100%;
     opacity:1.0;
     background-color: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

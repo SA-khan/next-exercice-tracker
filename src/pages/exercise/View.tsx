@@ -3,19 +3,17 @@ import ExerciseTracker_LoginForm from '@/components/exercise-tracker/ExerciseTra
 import ExerciseTrackerLayout from '@/components/exercise-tracker/ExerciseLayout';
 import styles from './exercise_style.module.css'
 import RegisterForm from '@/components/exercise-tracker/RegisterForm';
-import EditActivity from '@/components/exercise-tracker/EditActivity';
+import ViewActivity from '@/components/exercise-tracker/ViewActivity';
 
-const Edit = () => {
+const View = () => {
     return <React.Fragment>
         <ExerciseTrackerLayout>
-        <div className='w-100'>
-            <div className='w-100'>
-                <div className='shadow card p-2 w-100 h-50 border border-dark'>
-                    <EditActivity />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+        <div className={styles.login}>
+            <div className={styles.container + 'overflow-auto'}>
+                <hr />
+            <h2 className='bg-dark text-white text-center m-2 p-2 border border-black'>Exercise Track View</h2>
+                <div className='shadow card m-3 p-3'>
+                    <ViewActivity />
                     <br />
                 </div>
 
@@ -25,4 +23,4 @@ const Edit = () => {
     </React.Fragment>;
 }
 
-export default Edit;
+export default View;

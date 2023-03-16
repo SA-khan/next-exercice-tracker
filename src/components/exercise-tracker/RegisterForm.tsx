@@ -10,9 +10,9 @@ const RegisterForm = () => {
     const registerHandler = (e: Event) => {
         e.preventDefault();
         console.log("user id: " + username + "email id: " + email+ ", passcode: " + passcode);
-        let model : RegistrationModel = new RegistrationModel(1, username, email, passcode);
-        let response = (new ExerciseTrackerService()).Registration(model); 
-        console.log(response);
+        //let model : RegistrationModel = new RegistrationModel(1, username, email, passcode);
+        //let response = (new ExerciseTrackerService()).Registration(model); 
+        //console.log(response);
     }
     return <React.Fragment>
         <div className={styles.register}>

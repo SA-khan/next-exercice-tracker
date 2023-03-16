@@ -1,13 +1,12 @@
 import RegistrationModel from "@/models/RegistrationModel";
-import mongoose, { Schema } from "mongoose"
+import Mongoose, { Schema } from "mongoose"
 
-const RegistrationSchema = () => {
-    return new Schema({
+const RegistrationSchema = new Schema ({
         'registrationId': Number,
         'userName': String,
         'emailAddress': String,
         'passcode': String,
-    })
-}
 
-export default mongoose.models.ExerciseRegistration === undefined ?  mongoose.model('ExerciseRegistration', RegistrationSchema()) : mongoose.models.ExerciseRegistration ;
+});
+
+export default Mongoose.models.Registration || Mongoose.model('Registration', RegistrationSchema);

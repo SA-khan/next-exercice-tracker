@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Image from 'next/image'
 import  utilStyles  from '../../styles/utils.module.css'
 import { WeatherModel } from '@/models/WeatherModel'
@@ -8,7 +8,8 @@ import { ActivityTypeEnum } from '@/enums/ActivityTypeEnum'
 import { ExerciseTrackerService } from '@/services/ExerciseTrackerService'
 import ExerciseTaskModel from '@/models/ExerciseTaskModel'
 
-const AddActivity = () => {
+const EditActivity = () => {
+
     var task: TaskModel = new TaskModel();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -17,7 +18,7 @@ const AddActivity = () => {
     const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
 
-    const handleAdd = (e) => {
+    const handleUpdate = (e) => {
         e.preventDefault();
         console.log("Title: " + title + ", Description: " + description + ", Duration: " + duration + ', Date: ' + date);
         //const service = new ExerciseTrackerService();
@@ -27,8 +28,8 @@ const AddActivity = () => {
     }
 
     return <React.Fragment>
-            <div className='card p-2 mb-2'>
-                <h2 className="h2 m-2 p-2 bg-dark text-white">Add Activity Form</h2>
+        <div className='card p-2 mb-2'>
+                <h2 className="h2 m-2 p-2 bg-dark text-white">Edit Activity Form</h2>
                 <form>
                 <div className='container'>
                             <div className='row no-gutters m-2'>
@@ -60,7 +61,7 @@ const AddActivity = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='add'></label></div>
-                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleAdd(e)}>ADD</button></div>
+                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleUpdate(e)}>UPDATE</button></div>
                             </div>
                     </div>
                 </form>
@@ -68,4 +69,4 @@ const AddActivity = () => {
     </React.Fragment>;
 }
 
-export default AddActivity;
+export default EditActivity;

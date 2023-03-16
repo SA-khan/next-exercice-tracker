@@ -1,3 +1,4 @@
+import Registration from '@/schemas/RegistrationSchema'
 import RegistrationModel from '@/models/RegistrationModel'
 import ExerciseTaskModel from '@/models/ExerciseTaskModel'
 import LoginModel from '@/models/LoginModel'
@@ -5,18 +6,20 @@ import Envelop from '@/models/Envelop'
 import Mongoose from 'mongoose'
 import { dbUrl } from '@/config/Keys';
 import RegistrationSchema from '@/schemas/RegistrationSchema';
-import ExerciseTaskSchema from '@/schemas/ExerciseTaskSchema'
+import ExerciseTaskSchema from '@/schemas/ExerciseTaskSchema';
 import { Connect } from 'react-redux';
+import dbConnect from './dbConnect'
 
 
 export class ExerciseTrackerService {
     constructor() {
-
+        
     }
 
     public async Registration(model: RegistrationModel) : Promise<Envelop> {
-        await this.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{console.log("Connected")}).catch(()=>{console.log("Not Connected")});
-        var response = RegistrationSchema.create(model);
+        await dbConnect;
+        //await this.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{console.log("Connected")}).catch(()=>{console.log("Not Connected")});
+        var response = Registration.create(model);
         var query = response;
         return new Envelop( true, 1000001, model);
     }

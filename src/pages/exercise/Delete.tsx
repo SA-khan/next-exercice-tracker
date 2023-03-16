@@ -3,15 +3,15 @@ import ExerciseTracker_LoginForm from '@/components/exercise-tracker/ExerciseTra
 import ExerciseTrackerLayout from '@/components/exercise-tracker/ExerciseLayout';
 import styles from './exercise_style.module.css'
 import RegisterForm from '@/components/exercise-tracker/RegisterForm';
-import EditActivity from '@/components/exercise-tracker/EditActivity';
+import DeleteActivity from '@/components/exercise-tracker/DeleteActivity';
 
-const Edit = () => {
+const Delete = () => {
     return <React.Fragment>
         <ExerciseTrackerLayout>
-        <div className='w-100'>
-            <div className='w-100'>
+        <div className=''>
+            <div className=''>
                 <div className='shadow card p-2 w-100 h-50 border border-dark'>
-                    <EditActivity />
+                    <DeleteActivity />
                     <br />
                     <br />
                     <br />
@@ -25,4 +25,4 @@ const Edit = () => {
     </React.Fragment>;
 }
 
-export default Edit;
+export default Delete;
