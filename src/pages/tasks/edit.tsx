@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Layout from '../../components/Layout'
+import { useRouter } from 'next/router'
 
-const Edit = ({ id = 1  }) => {
+const Edit = () => {
+    const router = useRouter()
+    const { id } = router.query
     return <div>
         <Head>
             <title>Exercise Tracker - Edit Task</title>

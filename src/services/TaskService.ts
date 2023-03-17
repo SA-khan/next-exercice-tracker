@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { Axios } from 'axios';
 const mongoose = require('mongoose');
 import  { TaskSchema }  from '../schemas/TaskSchema'
 import { TaskModel } from '@/models/TaskModel'
 import Envelop  from '@/models/Envelop';
 import {dbUrl} from '../config/Keys';
+
+const taskUrl = '/api/tasks';
 
 export class TaskService {
 
@@ -11,10 +14,8 @@ export class TaskService {
     public tasks ?: TaskModel[] = []
 
     public async GetAll() : Promise<Envelop> {
-        let connection = await mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-        var query = await TaskSchema.find();
-        var response = new Envelop(true, 1000001, query);
-        return response;
+        let res = await new Axios().get(taskUrl).then(function(response) { console.log(response); });
+        return new Envelop();
     }
 
     // public async GetById(id: number) {

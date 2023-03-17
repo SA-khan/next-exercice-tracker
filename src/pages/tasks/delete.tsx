@@ -1,7 +1,12 @@
 import Head from 'next/head'
 import Layout from '../../components/Layout'
+import { useRouter } from 'next/router'
 
-const Delete = ({ id = 1  }) => {
+const Delete = () => {
+
+    const router = useRouter();
+    const { id } = router.query;
+
     return <div>
         <Head>
             <title>Exercise Tracker - Delete Task</title>
