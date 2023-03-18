@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Axios } from 'axios';
+import  Axios from 'axios';
 const mongoose = require('mongoose');
 import  { TaskSchema }  from '../schemas/TaskSchema'
 import { TaskModel } from '@/models/TaskModel'
@@ -14,8 +14,7 @@ export class TaskService {
     public tasks ?: TaskModel[] = []
 
     public async GetAll() : Promise<Envelop> {
-        let res = await new Axios().get(taskUrl).then(function(response) { console.log(response); });
-        return new Envelop();
+        return await (await Axios.get(taskUrl)).data as Envelop;
     }
 
     // public async GetById(id: number) {

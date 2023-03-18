@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Layout from '../../components/Layout'
-import { useRouter } from 'next/router'
+import Head from 'next/head';
+import TaskLayout from '@/components/tasks/TaskLayout';
+import { useRouter } from 'next/router';
 
 const Delete = () => {
 
@@ -11,9 +11,9 @@ const Delete = () => {
         <Head>
             <title>Exercise Tracker - Delete Task</title>
         </Head>
-        <Layout>
-            <h2>Delete Task {id}</h2>
-        </Layout>
+        <TaskLayout>
+            <h2 className='bg-warning text-center m-2 p-2'>Delete Task</h2>
+        </TaskLayout>
     </div>;
 } ;
 

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../../components/Layout'
+import TaskLayout from '@/components/tasks/TaskLayout';
 import { useRouter } from 'next/router'
 
 const Edit = () => {
@@ -9,9 +9,9 @@ const Edit = () => {
         <Head>
             <title>Exercise Tracker - Edit Task</title>
         </Head>
-        <Layout>
-            <h2>Edit Task {id}</h2>
-        </Layout>
+        <TaskLayout>
+            <h2 className='bg-warning text-center m-2 p-2'>Edit Task</h2>
+        </TaskLayout>
     </div>;
 } ;
 
