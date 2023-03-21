@@ -14,7 +14,7 @@ import { GeoCoordinateModel } from '@/models/GeoCoordinateModel'
 import { CurrencyModel } from '@/models/CurrencyModel'
 import WeatherNavigation from '@/components/weather/WeatherNavigation'
 
-const index = () => {
+const WeatherIndex = () => {
     const flag = new FlagModel(1, "pk", "Pakistan Flag", '/images/countries/pk.png', true);
     const geoLocationRegion = new GeoCoordinateModel(1, 'South Asia Coordinates', 'South Asia Coordinates', 122.5164000, 9.5506000, '/images/regions/south_asia.jpg', true);
     const regionSouthAsia = new RegionModel(1, 'REG-SA', 'South Asia', 'South Asia Region', '/images/regions/SouthAsia.png', geoLocationRegion, true);
@@ -35,4 +35,4 @@ const index = () => {
     </React.Fragment>;
 }
 
-export default index;
+export default WeatherIndex;

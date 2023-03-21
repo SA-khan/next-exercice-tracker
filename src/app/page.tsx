@@ -11,7 +11,7 @@ import { createStore } from 'redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Index from '@/pages/index/Index';
 import Prayer from '@/pages/prayer'
-import Weather from '@/pages/weather/index'
+import WeatherIndex from '@/pages/weather/WeatherIndex'
 import News from '@/pages/news/index'
 import Tasks from '@/pages/tasks/index'
 import Blogs from '@/pages/blogs/index'
@@ -27,7 +27,7 @@ export default function Home() {
                 <Route path="/" element={<Layout><Index /></Layout>}>
                   <Route index element={<Index/>} />
                   <Route path="prayer" element={<Prayer />} />
-                  <Route path="weather" element={<Weather />} />
+                  <Route path="weather" element={<WeatherIndex />} />
                   <Route path="news" element={<News />} />
                   <Route path="tasks" element={<Tasks />} />
                   <Route path="blogs" element={<Blogs />} />
