@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { NewsService } from '@/services/NewsService';
 let api_call = (new NewsService()).GetGNews();
 
-const OthersComponent = (news: NewsArticleModel[]) => {
+const OthersComponent = () => {
 
     const [articles, setArticles] = useState<NewsArticleModel[] | undefined>()
 

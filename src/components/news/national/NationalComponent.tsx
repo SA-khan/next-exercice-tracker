@@ -4,7 +4,7 @@ import  utilStyles  from '../styles/utils.module.css'
 import { NewsModel } from '@/models/NewsModel';
 import { NewsTypeEnum } from "@/enums/NewsTypeEnum";
 import { NewsArticleModel } from '@/models/NewsArticleModel';
-import NewsReport from './NewsReport';
+import NewsReport from '../NewsReport';
 import Link from 'next/link'
 import { NewsService } from '@/services/NewsService';
 let api_call = (new NewsService()).GetGNews();
@@ -32,10 +32,11 @@ const NationalComponent = () => {
                             <div className='col-8'>
                                 <p id='news_title' className='text-center mark p-2'>{articles?.[0].title ?? 'Waiting..'}</p>
                                 <hr />
-                                <p id='news_description' className='small lead bg-light'> {articles?.[0].description ?? 'Waiting..'}</p>
-                                <p id='news_content' className='small lead bg-light'> {articles?.[0].content ?? 'Waiting..'}<a className='text-decoration-none small' href={articles?.[0].url}> Read more</a></p>
+                                <p id='news_description' className='text-center small p-2 bg-light'> {articles?.[0].description ?? 'Waiting..'}</p>
+                                <p id='news_content' className='small p-2 bg-light h-25'> {articles?.[0].content ?? 'Waiting..'}<a className='text-decoration-none small' href={articles?.[0].url}> Read more</a></p>
                                 <hr />
-                                <p id='news_description' className='small lead bg-white float-end'><small> Published at: <strong>{articles?.[0].publishedAt?.replace('T', ' ').replace('Z','')}</strong></small></p>
+                                <p id='news_description' className='bg-white'> Published Time: {articles?.[0].publishedAt?.replace('T', ' ').replace('Z','').substring(11)}</p>
+                                <p id='news_description' className='bg-white'> Published Date: {articles?.[0].publishedAt?.replace('T', ' ').replace('Z','').substring(0,10)}</p>
                             </div>
                             <div className='col-4'>
                                 <div className='row text-center bg-light p-2'>

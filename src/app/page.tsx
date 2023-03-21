@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -7,36 +8,34 @@ import Image from 'next/image'
 import PageHeading from '../components/shared/PageHeading'
 import Styles from '../app/styles.module.css'
 import { createStore } from 'redux'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Index from '@/pages/index/Index';
+import Prayer from '@/pages/prayer'
+import Weather from '@/pages/weather/index'
+import News from '@/pages/news/index'
+import Tasks from '@/pages/tasks/index'
+import Blogs from '@/pages/blogs'
+import Exercise from '@/pages/exercise'
+import { Outlet } from 'react-router-dom'
 
 export default function Home() {
-  function addZero(i) {
-    if (i < 10) {i = "0" + i}
-    return i;
-  }
-  
-  const d = new Date();
-  let h = addZero(d.getHours());
-  let m = addZero(d.getMinutes());
-  let s = addZero(d.getSeconds());
-  let symbol = h / 12 > 0 ? 'pm' : 'am' 
-  let time = h % 12 + ":" + m;
   return (
       <React.Fragment>
-        <Head>
-          <title>Exercise App - Home</title> 
-        </Head>
-        <Layout>
           <div className='card shadow p-2 mt-2 mb-2'>
-            <PageHeading title='Home' source='home.jfif' />  
-            
-            <div className={Styles.container}>
-              <h1>
-                <div className={Styles.time}>{time} {symbol}</div>
-              </h1>
-            </div>
-
-            </div>
-        </Layout>
+            <BrowserRouter>
+              <Routes>
+              <Route path="/" element={<Layout><Index /></Layout>}>
+                <Route index element={<Index/>} />
+                <Route path="prayer" element={<Prayer />} />
+                <Route path="weather" element={<Weather />} />
+                <Route path="news" element={<News />} />
+                <Route path="tasks" element={<Tasks />} />
+                <Route path="blogs" element={<Blogs />} />
+                <Route path="exercise" element={<Exercise />} />
+              </Route>
+              </Routes>
+            </BrowserRouter>
+          </div>
       </React.Fragment>
   )
 }

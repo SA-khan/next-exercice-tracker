@@ -10,7 +10,7 @@ const Worldwide = () => {
         <Layout>
             <PageHeading title="News Updates" source="news.png" />
             <NewsNavigation />
-            <h2 className='mt-2 mb-2'>Worldwide News</h2>
+            <h2 className='mt-2 mb-2 bg-warning text-center p-2'>Worldwide News</h2>
             <div>
                 <WorldwideComponent />
             </div>

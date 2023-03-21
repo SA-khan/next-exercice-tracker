@@ -4,7 +4,7 @@ import ExerciseTrackerLayout from '@/components/exercise-tracker/ExerciseLayout'
 import styles from './exercise_style.module.css'
 import RegisterForm from '@/components/exercise-tracker/RegisterForm';
 
-const Register = () => {
+const register = () => {
     return <React.Fragment>
         <ExerciseTrackerLayout>
         <div className={styles.login}>
@@ -25,4 +25,4 @@ const Register = () => {
     </React.Fragment>;
 }
 
-export default Register;
+export default register;

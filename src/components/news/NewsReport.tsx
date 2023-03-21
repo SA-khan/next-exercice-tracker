@@ -13,7 +13,7 @@ const NewsReport = (news: NewsArticleModel) => {
             </div>
             <div className='col'>
                 <em>{news.title}</em>
-                <a target='_blank' href={news.url}> Read </a>
+                <a className='text-decoration-none' target='_blank' href={news.url}> ..Read </a>
             </div>
         </div>
     </React.Fragment>;

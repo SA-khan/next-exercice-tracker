@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '@/components/Layout';
 import PageHeading from '@/components/shared/PageHeading';
 import NewsNavigation from '@/components/news/NewsNavigation';
-import BusinessComponent from '@/components/news/BusinessComponent';
+import BusinessComponent from '@/components/news/business/BusinessComponent';
 
 const Gossip = () => {
     return <React.Fragment>

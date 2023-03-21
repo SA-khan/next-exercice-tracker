@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 import PageHeading from '@/components/shared/PageHeading';
 import NewsNavigation from '@/components/news/NewsNavigation';
 import NewsSummary from '@/components/NewsSummary';
-import NationalComponent from '@/components/news/NationalComponent';
+import NationalComponent from '@/components/news/national/NationalComponent';
 
 const National = () => {
     return <React.Fragment>

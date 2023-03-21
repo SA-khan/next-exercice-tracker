@@ -6,7 +6,7 @@ import PageHeading from '../../components/shared/PageHeading'
 import BlogNavigation from '@/components/blogs/BlogNavigation'
 import Styles from './styles.module.css'
 
-const Index = () => {
+const index = () => {
     return <React.Fragment>
         <div>
         <Layout>
@@ -25,4 +25,4 @@ const Index = () => {
     </React.Fragment>;
 }
 
-export default Index;
+export default index;

@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { NewsService } from '@/services/NewsService';
 let api_call = (new NewsService()).GetTechnologyNews();
 
-const TechnologyComponent = (news: NewsArticleModel[]) => {
+const TechnologyComponent = () => {
 
     const [articles, setArticles] = useState<NewsArticleModel[] | undefined>()
 
@@ -32,7 +32,7 @@ const TechnologyComponent = (news: NewsArticleModel[]) => {
             <NewsReport {...articles?.[3]} />
             <hr />
             <div className='text-center'>
-            <Link className='m-2 text-decoration-none' href='/news/breaking'>See All</Link>
+            <Link className='m-2 text-decoration-none' href='/news/tehnology/list'>See All</Link>
             </div>
         </div>
     </React.Fragment>;

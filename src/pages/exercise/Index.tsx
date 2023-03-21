@@ -7,7 +7,7 @@ import SaveExerciseTrackerComponent from '../../components/exercise-tracker/AddA
 import ExerciseTrackerNavigation from '../../components/exercise-tracker/ExerciseTrackerNavigation'
 import ExerciseTrackerTheme from '@/components/exercise-tracker/ExerciseTrackerTheme'
 
-const Index = () => {
+const index = () => {
     return <React.Fragment>
         <div>
         <Layout>
@@ -19,4 +19,4 @@ const Index = () => {
     </React.Fragment>;
 }
 
-export default Index;
+export default index;

@@ -3,7 +3,7 @@ import './footerStyle.css'
 
 const Footer = () => {
     return <React.Fragment>
-        <div className="bg-warning footer-text text-center p-2">
+        <div className="bg-light footer-text text-center p-2">
             <footer>
                 <span>All Rights Reserved @ 2023 </span>
             </footer>

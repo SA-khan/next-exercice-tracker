@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import  Axios from 'axios';
-const mongoose = require('mongoose');
+import Mongoose from 'mongoose';
+import {dbUrl} from '../config/Keys';
+import Envelop  from '@/models/Envelop';
 import  { TaskSchema }  from '../schemas/TaskSchema'
 import { TaskModel } from '@/models/TaskModel'
-import Envelop  from '@/models/Envelop';
-import {dbUrl} from '../config/Keys';
+
+
 
 const taskUrl = '/api/tasks';
 
@@ -17,12 +19,12 @@ export class TaskService {
         return await (await Axios.get(taskUrl)).data as Envelop;
     }
 
-    // public async GetById(id: number) {
-    //     var val = new TaskSchema;
-    //     var response = new Envelop(true, 1000001, await val.find({ taskId: id }));
-    //     console.log('Get By Id!');
-    //     return response;
-    // }
+    public async GetById(id: number) {
+        var val = new TaskSchema;
+        var response = new Envelop(true, 1000001, await val.find({ taskId: id }));
+        console.log('Get By Id!');
+        return response;
+    }
 
     // public async Save(task: TaskModel) {
     //     var response = new Envelop();

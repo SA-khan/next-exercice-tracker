@@ -4,9 +4,10 @@ import  utilStyles  from '../styles/utils.module.css'
 import { NewsModel } from '@/models/NewsModel';
 import { NewsTypeEnum } from "@/enums/NewsTypeEnum";
 import { NewsArticleModel } from '@/models/NewsArticleModel';
-import NewsReport from './NewsReport';
+import NewsReport from '../NewsReport';
 import Link from 'next/link'
 import { NewsService } from '@/services/NewsService';
+import Goto from '../../controls/Goto';
 let api_call = (new NewsService()).GetGNews('business');
 
 const BusinessComponent = (news: NewsArticleModel[]) => {
@@ -31,8 +32,8 @@ const BusinessComponent = (news: NewsArticleModel[]) => {
             <hr />
             <NewsReport {...articles?.[3]} />
             <hr />
-            <div className='text-center'>
-            <Link className='m-2 text-decoration-none' href='/news/breaking'>See All</Link>
+            <div className='w-100 text-center align-center float-right'>
+                <Goto title='View more' href="/news/business/" />
             </div>
         </div>
     </React.Fragment>;

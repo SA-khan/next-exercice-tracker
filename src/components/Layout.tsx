@@ -10,6 +10,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 
 const Layout = ({ children }:{children: React.ReactNode}) => {
+    const name = 'muhammad saad ahmed'
     return <React.Fragment>
             <div className='container container-fluid'>
                 <Header />

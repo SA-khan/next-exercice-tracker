@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { NewsService } from '@/services/NewsService';
 let api_call = (new NewsService()).GetGNews('world');
 
-const WorldwideComponent = (news: NewsArticleModel[]) => {
+const WorldwideComponent = () => {
 
     const [articles, setArticles] = useState<NewsArticleModel[] | undefined>()
 
@@ -32,7 +32,7 @@ const WorldwideComponent = (news: NewsArticleModel[]) => {
             <NewsReport {...articles?.[3]} />
             <hr />
             <div className='text-center'>
-            <Link className='text-decoration-none' href='/news/List'>See All</Link>
+            <Link className='btn btn-primary text-decoration-none m-2 float-end' href='/news/worldwide/list'>See All</Link>
             </div>
         </div>
     </React.Fragment>;

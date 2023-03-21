@@ -33,12 +33,12 @@ const Navigation = () => {
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/blogs/Index">Blogs</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/blogs">Blogs</Link>
                         </th>
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/exercise/Index">Exercise Tracking</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/exercise">Exercise Tracking</Link>
                         </th>
                     </tr>
                 </tbody>

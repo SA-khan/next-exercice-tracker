@@ -5,7 +5,7 @@ import styles from './exercise_style.module.css'
 import RegisterForm from '@/components/exercise-tracker/RegisterForm';
 import ViewActivity from '@/components/exercise-tracker/ViewActivity';
 
-const View = () => {
+const view = () => {
     return <React.Fragment>
         <ExerciseTrackerLayout>
         <div className={styles.login}>
@@ -23,4 +23,4 @@ const View = () => {
     </React.Fragment>;
 }
 
-export default View;
+export default view;
