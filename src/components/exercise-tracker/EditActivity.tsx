@@ -42,7 +42,7 @@ const EditActivity = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='activityType'>Activity Type</label></div>
-                                <div className='col'><select value={activityType} placeholder="Selcet Activity Type" onChange={(e)=>setActivityType(e.target.value)} required>
+                                <div className='col'><select value={activityType} placeholder="Selcet Activity Type" onChange={(e)=>setActivityType(1)} required>
                                     <option>Select type..</option>
                                     {
                                         activityTypeList.map(i => (
