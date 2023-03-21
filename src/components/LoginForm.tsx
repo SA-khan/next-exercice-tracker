@@ -15,7 +15,7 @@ const LoginForm = () => {
 
     const Submit = () => {
         console.log(username + "-" + passphrase);
-        var user: UserModel =  { username : username, passphrase : passphrase  }
+        // var user: UserModel =  { username : username, passphrase : passphrase  }
         Router.push('/dashboard?username='+username)
     }
 
