@@ -17,7 +17,7 @@ const AddActivity = () => {
     const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
 
-    const handleAdd = (e) => {
+    const handleAdd = (e: Event) => {
         e.preventDefault();
         console.log("Title: " + title + ", Description: " + description + ", Duration: " + duration + ', Date: ' + date);
         //const service = new ExerciseTrackerService();
