@@ -5,7 +5,7 @@ import { TaskModel } from '@/models/TaskModel';
 import TaskLayout from '@/components/tasks/TaskLayout';
 
 const view = () => {
-    var [tasks, setTasks] = useState([] as TaskModel[])
+    const [tasks, setTasks] = useState([] as TaskModel[])
     useEffect(()=>{
         const call = async () => {
             await (new TaskService()).GetAll().then(x=>{if(x.isSuccessful == true)setTasks(x.content);});

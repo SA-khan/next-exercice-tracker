@@ -33,7 +33,7 @@ const NationalComponent = () => {
                                 <p id='news_title' className='text-center mark p-2'>{articles?.[0].title ?? 'Waiting..'}</p>
                                 <hr />
                                 <p id='news_description' className='text-center small p-2 bg-light'> {articles?.[0].description ?? 'Waiting..'}</p>
-                                <p id='news_content' className='small p-2 bg-light h-25'> {articles?.[0].content ?? 'Waiting..'}<a className='text-decoration-none small' href={articles?.[0].url}> Read more</a></p>
+                                <p id='news_content' className='small p-2 bg-light h-25'> {articles?.[0].content ?? 'Waiting..'}<a className='text-decoration-none small' target='_blank' rel="noreferrer" href={articles?.[0].url}> Read more</a></p>
                                 <hr />
                                 <p id='news_description' className='bg-white'> Published Time: {articles?.[0].publishedAt?.replace('T', ' ').replace('Z','').substring(11)}</p>
                                 <p id='news_description' className='bg-white'> Published Date: {articles?.[0].publishedAt?.replace('T', ' ').replace('Z','').substring(0,10)}</p>
@@ -48,7 +48,7 @@ const NationalComponent = () => {
                                         <blockquote className='text-muted m-2'> Source </blockquote>
                                     </div>
                                     <div className='col'>
-                                        <p className='bg-light strong m-2'> <a className='text-decoration-none' target='_blank' href={articles?.[0].source?.url}>{articles?.[0].source?.name }</a> </p>
+                                        <p className='bg-light strong m-2'> <a className='text-decoration-none' target='_blank' rel="noreferrer" href={articles?.[0].source?.url}>{articles?.[0].source?.name }</a> </p>
                                     </div>
                                 </div>
                             </div>
