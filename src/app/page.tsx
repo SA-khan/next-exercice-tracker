@@ -9,13 +9,13 @@ import PageHeading from '../components/shared/PageHeading'
 import Styles from '../app/styles.module.css'
 import { createStore } from 'redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Index from '../pages/index/Index';
-import Prayer from '../pages/prayer'
-import Weather from '../pages/weather/index'
-import News from '../pages/news/index'
-import Tasks from '../pages/tasks/index'
-import Blogs from '../pages/blogs'
-import Exercise from '../pages/exercise'
+import Index from '@/pages/index/Index';
+import Prayer from '@/pages/prayer'
+import Weather from '@/pages/weather/index'
+import News from '@/pages/news/index'
+import Tasks from '@/pages/tasks/index'
+import Blogs from '@/pages/blogs/index'
+import Exercise from '@/pages/exercise/index'
 import { Outlet } from 'react-router-dom'
 
 export default function Home() {
@@ -24,15 +24,15 @@ export default function Home() {
           <div className='card shadow p-2 mt-2 mb-2'>
             <BrowserRouter>
               <Routes>
-              <Route path="/" element={<Layout><Index /></Layout>}>
-                <Route index element={<Index/>} />
-                <Route path="prayer" element={<Prayer />} />
-                <Route path="weather" element={<Weather />} />
-                <Route path="news" element={<News />} />
-                <Route path="tasks" element={<Tasks />} />
-                <Route path="blogs" element={<Blogs />} />
-                <Route path="exercise" element={<Exercise />} />
-              </Route>
+                <Route path="/" element={<Layout><Index /></Layout>}>
+                  <Route index element={<Index/>} />
+                  <Route path="prayer" element={<Prayer />} />
+                  <Route path="weather" element={<Weather />} />
+                  <Route path="news" element={<News />} />
+                  <Route path="tasks" element={<Tasks />} />
+                  <Route path="blogs" element={<Blogs />} />
+                  <Route path="exercise" element={<Exercise />} />
+                </Route>
               </Routes>
             </BrowserRouter>
           </div>
