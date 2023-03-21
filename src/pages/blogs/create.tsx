@@ -4,10 +4,10 @@ import BlogLayout from '../../components/blogs/BlogLayout'
 const Create = () => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-    const [keywords, setKeywords] = useState([])
+    const [keywords, setKeywords] = useState("")
 
-    function saveHandler(e)  {
-        e.preventDefault();
+    function saveHandler()  {
+        //e.preventDefault();
         console.log(title + '-' + description + '-' + keywords);
     }
     
@@ -27,10 +27,10 @@ const Create = () => {
             </div>
             <div className='form-group'>
                 <label className='form-control' htmlFor='keywords'>Keywords
-                    <input value={keywords} onChange={(e)=>setKeywords(e.target.value)} placeholder="Enter Keywords" />
+                    <input value={keywords} onChange={(e)=>console.log(e.target.value)} placeholder="Enter Keywords" />
                 </label>
             </div>
-            <button className='btn btn-primary m-2' onClick={(e)=>saveHandler(e)}>Save</button>
+            <button className='btn btn-primary m-2' onClick={(e)=>saveHandler()}>Save</button>
         </div>
         </BlogLayout>
     </React.Fragment>;
