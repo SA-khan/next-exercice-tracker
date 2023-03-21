@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 const DeleteActivity = () => {
     const [id, setId] = useState('')
-    const handleDelete = (e) => {
-        e.preventDefault();
+    const handleDelete = () => {
+        //e.preventDefault();
         console.log('Delete Task Id: ' + id);
         //const service = new ExerciseTrackerService();
     }
@@ -19,7 +19,7 @@ const DeleteActivity = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='delete'></label></div>
-                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-danger mt-2 p-2' onClick={(e)=>handleDelete(e)}>Delete</button></div>
+                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-danger mt-2 p-2' onClick={(e)=>handleDelete()}>Delete</button></div>
                             </div>
                     </div>
                 </form>
