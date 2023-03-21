@@ -24,7 +24,7 @@ const NationalComponent = () => {
             <h2 className='mt-2 mb-2 p-2 bg-warning text-center'>National News</h2>
             <div className='overflow-scrollable'>
                 <div className="border border-light bg-info p-1 strong">
-                    <marquee>{articles?.[0].title ?? '' + ' ▣ ' + articles?.[1].title ?? '' + ' ▣ ' + articles?.[2].title + ' - ' + articles?.[3].title + ' - ' + articles?.[4].title + ' - ' + articles?.[5].title + ' - ' + articles?.[6].title + ' - ' + articles?.[7].title + ' - ' + articles?.[8].title + ' - ' + articles?.[9].title + ' - ' + articles?.[10].title }</marquee>
+                    {/* <marquee>{articles?.[0].title ?? '' + ' ▣ ' + articles?.[1].title ?? '' + ' ▣ ' + articles?.[2].title + ' - ' + articles?.[3].title + ' - ' + articles?.[4].title + ' - ' + articles?.[5].title + ' - ' + articles?.[6].title + ' - ' + articles?.[7].title + ' - ' + articles?.[8].title + ' - ' + articles?.[9].title + ' - ' + articles?.[10].title }</marquee> */}
                 </div>
                     <hr />  
                     <div className='card'>
