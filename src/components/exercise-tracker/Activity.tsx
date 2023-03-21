@@ -41,7 +41,7 @@ const Activity = ({activity}:{activity: ExerciseTaskModel}) => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-3 h-100 w-25 float-end shadow' align='center'>
+                    <div className='col-3 h-100 w-25 float-end shadow'>
                         <div className='row'>
                             <div className='col'>
                                 <p className='mx-2 p-2'>{ activityType }</p>
