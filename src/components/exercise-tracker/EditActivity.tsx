@@ -18,8 +18,8 @@ const EditActivity = () => {
     const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
 
-    const handleUpdate = (e) => {
-        e.preventDefault();
+    const handleUpdate = () => {
+        //e.preventDefault();
         console.log("Title: " + title + ", Description: " + description + ", Duration: " + duration + ', Date: ' + date);
         //const service = new ExerciseTrackerService();
         //const model = new ExerciseTaskModel(1, title, description, activityType, duration, date);
@@ -61,7 +61,7 @@ const EditActivity = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='add'></label></div>
-                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleUpdate(e)}>UPDATE</button></div>
+                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleUpdate()}>UPDATE</button></div>
                             </div>
                     </div>
                 </form>
