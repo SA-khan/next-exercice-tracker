@@ -45,7 +45,7 @@ const AddActivity = () => {
                                     <option>Select type..</option>
                                     {
                                         activityTypeList.map(i => (
-                                            <option>{i}</option>
+                                            <option key={i}>{i}</option>
                                         ))
                                     }
                                     </select></div>

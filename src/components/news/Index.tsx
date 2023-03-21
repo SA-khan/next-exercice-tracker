@@ -20,7 +20,7 @@ const Index = () => {
         <div>
         {
             articles?.map(article=>( 
-                <div className='card shadow mt-2 mb-2 p-4'>
+                <div key={article.title} className='card shadow mt-2 mb-2 p-4'>
                     <div className='row card-title'>
                         <div className='col-3 text-center bg-light'>
                             <img className='w-100 h-100 bacground-position-cover' width={140} height={140} src={article.urlToImage ?? "/images/news.png"} alt="news image" />
@@ -50,7 +50,7 @@ const Index = () => {
                         </div>
                         <div className='col bg-light text-center'>
                             <button className='btn btn-sm btn-danger mt-2'>Add to Favourites</button>
-                            <a className='btn btn-sm btn-primary mt-2 align-bottom' target='_blank' href={article.url}><span className='float-right'>Read More</span></a>
+                            <a className='btn btn-sm btn-primary mt-2 align-bottom' target='_blank' rel="noreferrer" href={article.url}><span className='float-right'>Read More</span></a>
                             <div className='badge badge-pill border border-dark text-dark w-100 mt-2 p-2'>Views : 1</div>
                         </div>
                     </div>

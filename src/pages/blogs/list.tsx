@@ -11,7 +11,7 @@ const List = () => {
     return <React.Fragment>
         <BlogLayout>
             {
-            blogs.map((blog: BlogModel) => ( <BlogCard blogModel={blog} /> ))
+            blogs.map((blog: BlogModel) => ( <BlogCard key={blog.blogId} blogModel={blog} /> ))
             }
         </BlogLayout>
     </React.Fragment>;

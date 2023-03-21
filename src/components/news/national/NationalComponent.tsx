@@ -68,7 +68,7 @@ const NationalComponent = () => {
                                             <p className='mark'>{articles?.[1].title} </p>
                                         </div>
                                         <div className='row bg-light'>
-                                            <p className='mb-2'>{articles?.[1].description} <a target='_blank' href={articles?.[1].url}> read more</a> </p>
+                                            <p className='mb-2'>{articles?.[1].description} <a target='_blank' rel="noreferrer" href={articles?.[1].url}> read more</a> </p>
                                         </div>
                                     </div>
                                 </div>

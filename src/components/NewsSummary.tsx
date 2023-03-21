@@ -30,7 +30,7 @@ const NewsSummary = () => {
                         <h6 id='headline-title' className='mt-2 px-3 w-100'>
                             {news?.articles?.[0]?.title ?? 'Demo Headline'}
                         </h6>
-                        <p id='headline-text' className='text-dark px-3'>{news?.articles?.[0]?.description?.substring(0, 120) + '...' ?? 'Demo Text'}<span className='d-inline-block'><a className='' target='_blank' href={news?.articles?.[0]?.url}> Read more</a></span></p>
+                        <p id='headline-text' className='text-dark px-3'>{news?.articles?.[0]?.description?.substring(0, 120) + '...' ?? 'Demo Text'}<span className='d-inline-block'><a className='' target='_blank' rel="noreferrer" href={news?.articles?.[0]?.url}> Read more</a></span></p>
                     </div>
                     <div className='text-center'><em>Source Reference: <strong>newsapi.org</strong></em></div>
                 </div>
