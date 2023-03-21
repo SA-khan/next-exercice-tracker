@@ -17,38 +17,38 @@ const WeatherComponent = ({}) => {
         }
         call();
 
-        var coordinates = document.getElementById('geo_txt');
-        coordinates.value = weather.location?.lon + ", " + weather.location?.lat;
+        // var coordinates = document.getElementById('geo_txt');
+        // coordinates.value = weather.location?.lon + ", " + weather.location?.lat;
 
-        const isDay = weather.current?.is_day; // ? (document.getElementById('main_view')?.classList.add('bg-light')) : (document.getElementById('main_view')?.classList.add('bg-dark'))
-        console.log("Day-"+isDay)
-        if(isDay == true) {
-            if(document.getElementById("main_view").classList.contains('bg-light')){
-                console.log("contains");
+        // const isDay = weather.current?.is_day; // ? (document.getElementById('main_view')?.classList.add('bg-light')) : (document.getElementById('main_view')?.classList.add('bg-dark'))
+        // console.log("Day-"+isDay)
+        // if(isDay == true) {
+        //     if(document.getElementById("main_view").classList.contains('bg-light')){
+        //         console.log("contains");
                 
-            }
-            else {
-                console.log("not contains");
-                document.getElementById("main_view").classList.remove('bg-dark');
-                document.getElementById('main_view')?.classList.add('bg-light');
-            }
-        }
-        else {
-            if(document.getElementById("main_view").classList.contains('bg-dark')){
-                console.log("contains");
+        //     }
+        //     else {
+        //         console.log("not contains");
+        //         document.getElementById("main_view").classList.remove('bg-dark');
+        //         document.getElementById('main_view')?.classList.add('bg-light');
+        //     }
+        // }
+        // else {
+        //     if(document.getElementById("main_view").classList.contains('bg-dark')){
+        //         console.log("contains");
                 
-            }
-            else {
-                console.log("not contains");
-                document.getElementById("main_view").classList.remove('bg-light');
-                document.getElementById('main_view')?.classList.add('bg-dark');
-            }
-        }
+        //     }
+        //     else {
+        //         console.log("not contains");
+        //         document.getElementById("main_view").classList.remove('bg-light');
+        //         document.getElementById('main_view')?.classList.add('bg-dark');
+        //     }
+        // }
 
 
-        document.getElementById('region_select').value = weather.location?.tz_id?.replace("/Karachi","");
-        document.getElementById('country_select').value = weather.location?.country;
-        document.getElementById('city_select').value = weather.location?.name;
+        // document.getElementById('region_select').value = weather.location?.tz_id?.replace("/Karachi","");
+        // document.getElementById('country_select').value = weather.location?.country;
+        // document.getElementById('city_select').value = weather.location?.name;
 
     });
 
