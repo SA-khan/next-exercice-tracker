@@ -12,10 +12,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Index from '@/pages/index/Index';
 import Prayer from '@/pages/prayer'
 import WeatherIndex from '@/pages/weather/WeatherIndex'
-import News from '@/pages/news/index'
-import Tasks from '@/pages/tasks/index'
-import Blogs from '@/pages/blogs/index'
-import Exercise from '@/pages/exercise/index'
+import NewsIndex from '@/pages/news/NewsIndex'
+import TaskIndex from '@/pages/tasks/TaskIndex'
+import BlogsIndex from '@/pages/blogs/BlogsIndex'
+import ExerciseIndex from '@/pages/exercise/ExerciseIndex'
 import { Outlet } from 'react-router-dom'
 
 export default function Home() {
@@ -28,10 +28,10 @@ export default function Home() {
                   <Route index element={<Index/>} />
                   <Route path="prayer" element={<Prayer />} />
                   <Route path="weather" element={<WeatherIndex />} />
-                  <Route path="news" element={<News />} />
-                  <Route path="tasks" element={<Tasks />} />
-                  <Route path="blogs" element={<Blogs />} />
-                  <Route path="exercise" element={<Exercise />} />
+                  <Route path="news" element={<NewsIndex />} />
+                  <Route path="tasks" element={<TaskIndex />} />
+                  <Route path="blogs" element={<BlogsIndex />} />
+                  <Route path="exercise" element={<ExerciseIndex />} />
                 </Route>
               </Routes>
             </BrowserRouter>

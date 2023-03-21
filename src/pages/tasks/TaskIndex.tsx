@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import TaskLayout from '@/components/tasks/TaskLayout';
 
-const Index = () => {
+const TaskIndex = () => {
 
     return <div>
             <Head>
@@ -17,4 +17,4 @@ const Index = () => {
         </div>;
 }
 
-export default Index;
+export default TaskIndex;
