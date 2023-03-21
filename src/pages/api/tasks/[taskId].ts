@@ -2,10 +2,6 @@ import Envelop from "@/models/Envelop";
 import { TaskService } from "@/services/TaskService";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export const config = {
-    runtime: 'edge'
-}
-
 export default async function handler(request: NextApiRequest, response: NextApiResponse<Envelop>) {
     if(request.method == 'GET') {
         console.log('Bypass')
