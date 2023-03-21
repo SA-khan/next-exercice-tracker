@@ -12,7 +12,7 @@ const Activity = ({activity}:{activity: ExerciseTaskModel}) => {
         <div className='p-1 mt-2'>
             <div className='card-body'>
                 <div className='row no-gutters border border-light'>
-                    <div className='col-1 align-center p-1 shadow' align='center'>
+                    <div className='col-1 align-center p-1 shadow'>
                         <div className='text-muted'># {activity.exerciseTrackerId}</div>
                     </div>
                     <div className='col-5 shadow'>
