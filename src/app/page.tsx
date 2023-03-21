@@ -9,13 +9,13 @@ import PageHeading from '../components/shared/PageHeading'
 import Styles from '../app/styles.module.css'
 import { createStore } from 'redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Index from '@/pages/index/Index';
-import Prayer from '@/pages/prayer'
-import Weather from '@/pages/weather/index'
-import News from '@/pages/news/index'
-import Tasks from '@/pages/tasks/index'
-import Blogs from '@/pages/blogs'
-import Exercise from '@/pages/exercise'
+import Index from '../pages/index/Index';
+import Prayer from '../pages/prayer'
+import Weather from '../pages/weather/index'
+import News from '../pages/news/index'
+import Tasks from '../pages/tasks/index'
+import Blogs from '../pages/blogs'
+import Exercise from '../pages/exercise'
 import { Outlet } from 'react-router-dom'
 
 export default function Home() {
