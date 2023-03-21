@@ -7,8 +7,8 @@ const RegisterForm = () => {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [passcode, setPasscode] = useState("")
-    const registerHandler = (e: Event) => {
-        e.preventDefault();
+    const registerHandler = () => {
+        //e.preventDefault();
         console.log("user id: " + username + "email id: " + email+ ", passcode: " + passcode);
         //let model : RegistrationModel = new RegistrationModel(1, username, email, passcode);
         //let response = (new ExerciseTrackerService()).Registration(model); 
@@ -33,7 +33,7 @@ const RegisterForm = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='save'></label></div>
-                                <div className='col'><button className='btn btn-primary bg-primary mt-2 p-2' onClick={(e)=>registerHandler(e)}>Register</button></div>
+                                <div className='col'><button className='btn btn-primary bg-primary mt-2 p-2' onClick={(e)=>registerHandler()}>Register</button></div>
                             </div>
                         </div>
                     </form>
