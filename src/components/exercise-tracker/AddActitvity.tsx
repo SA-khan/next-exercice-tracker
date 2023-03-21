@@ -17,8 +17,8 @@ const AddActivity = () => {
     const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
 
-    const handleAdd = (e: Event) => {
-        e.preventDefault();
+    const handleAdd = () => {
+        //e.preventDefault();
         console.log("Title: " + title + ", Description: " + description + ", Duration: " + duration + ', Date: ' + date);
         //const service = new ExerciseTrackerService();
         //const model = new ExerciseTaskModel(1, title, description, activityType, duration, date);
@@ -60,7 +60,7 @@ const AddActivity = () => {
                             </div>
                             <div className='row no-gutters m-2'>
                                 <div className='col-3'><label htmlFor='add'></label></div>
-                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleAdd(e)}>ADD</button></div>
+                                <div className='col'><button className='btn btn-sm btn-dark text-white bg-dark mt-2 p-2' onClick={(e)=>handleAdd()}>ADD</button></div>
                             </div>
                     </div>
                 </form>
