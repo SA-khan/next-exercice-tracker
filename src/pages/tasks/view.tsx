@@ -4,7 +4,7 @@ import { TaskService } from '@/services/TaskService';
 import { TaskModel } from '@/models/TaskModel';
 import TaskLayout from '@/components/tasks/TaskLayout';
 
-const view = () => {
+const View = () => {
     const [tasks, setTasks] = useState([] as TaskModel[])
     useEffect(()=>{
         const call = async () => {
@@ -50,4 +50,4 @@ const view = () => {
     </React.Fragment>;
 }
 
-export default view;
+export default View;
