@@ -36,7 +36,7 @@ const NewsSummary = () => {
                 </div>
                 <div className='col'>
                     <div className='w-100 mb-2 border border-light shadow p-2'>
-                        <NewsList {...news.articles} />
+                        {/* <NewsList {...news.articles} /> */}
                     </div>
                 </div>
             </div>
