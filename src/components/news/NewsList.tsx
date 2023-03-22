@@ -7,7 +7,7 @@ import { NewsArticleModel } from '@/models/NewsArticleModel';
 import NewsReport from './NewsReport';
 import Link from 'next/link'
 
-const NewsList = (newsParam?: NewsArticleModel[]) => {
+const NewsList = (newsParam?: NewsArticleModel) => {
     return <React.Fragment>
         <div className='overflow-scrollable'>
             <hr />
