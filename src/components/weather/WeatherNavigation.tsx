@@ -46,59 +46,59 @@ const WeatherNavigation = () => {
 
     const [country, setCountry] = useState("Select..")
 
-    const getCountryUpdated = () => {
-    //     var countryName = e.toLowerCase();
-    //     var extension = ".png";
-    //     switch(countryName) {
-    //         case 'pakistan':
-    //             break;
-    //         case 'uae':
-    //             break;
-    //         case 'uk':
-    //             break;
-    //         case 'usa':
-    //             break;
-    //         case 'others':
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    //     //var bg = document.getElementById('country_view');
-    //     var path = '/images/countries/' + countryName + extension;
-    //     console.log(path);
-    //     //bg.style.backgroundImage = "url('" + path + "')";
-    //    // var country_name = document.getElementById('country_name');
-    //     //country_name.innerHTML = countryName.toUpperCase();
-    //     var country_map = document.getElementById('country_map');
-    //     path = '/images/coordinates/' + countryName + extension;
-    //     country_map.style.backgroundImage = "url('" + path + "')";
+    const getCountryUpdated = (e: any) => {
+        var countryName = e.target.value.toLowerCase();
+        var extension = ".png";
+        switch(countryName) {
+            case 'pakistan':
+                break;
+            case 'uae':
+                break;
+            case 'uk':
+                break;
+            case 'usa':
+                break;
+            case 'others':
+                break;
+            default:
+                break;
+        }
+        var bg = document.getElementById('country_view') as HTMLElement;
+        var path = '/images/countries/' + countryName + extension;
+        console.log(path);
+        bg.style.backgroundImage = "url('" + path + "')";
+        var country_name = document.getElementById('country_name') as HTMLElement;
+        country_name.innerHTML = countryName.toUpperCase();
+        var country_map = document.getElementById('country_map') as HTMLElement;
+        path = '/images/coordinates/' + countryName + extension;
+        country_map.style.backgroundImage = "url('" + path + "')";
     };
 
     const [city, setCity] = useState("")
 
-    const getCityUpdated = () => {
-        // var cityName = e.toLowerCase();
-        // var extension = ".png";
-        // switch(cityName) {
-        //     case 'multan':
-        //         break;
-        //     case 'karachi':
-        //         break;
-        //     case 'lahore':
-        //         break;
-        //     case 'islamabad':
-        //         break;
-        //     case 'others':
-        //         break;
-        //     default:
-        //         break;
-        // }
+    const getCityUpdated = (e: any) => {
+        var cityName = e.toLowerCase();
+        var extension = ".png";
+        switch(cityName) {
+            case 'multan':
+                break;
+            case 'karachi':
+                break;
+            case 'lahore':
+                break;
+            case 'islamabad':
+                break;
+            case 'others':
+                break;
+            default:
+                break;
+        }
  
-       // var city_name = document.getElementById('city_name');
-       // city_name.innerHTML = cityName.toUpperCase();
-        //var city_map = document.getElementById('city_map');
-        //var path = '/images/coordinates/' + cityName + extension;
-        //city_map.style.backgroundImage = "url('" + path + "')";
+        var city_name = document.getElementById('city_name') as HTMLElement;
+        city_name.innerHTML = cityName.toUpperCase();
+        var city_map = document.getElementById('city_map') as HTMLElement;
+        var path = '/images/coordinates/' + cityName + extension;
+        city_map.style.backgroundImage = "url('" + path + "')";
     };
 
     const [search, setSearch] = useState("")
@@ -122,7 +122,7 @@ const WeatherNavigation = () => {
                 </div>
                 <div className='d-inline col-3'>
                     <label> &nbsp; <strong>Country</strong> &nbsp;
-                        <select id="country_select" value={country} placeholder=" Search here " onChange={(e)=> { setCountry(e.target.value); getCountryUpdated() }} >
+                        <select id="country_select" value={country} placeholder=" Search here " onChange={(e)=> { setCountry(e.target.value); getCountryUpdated(e) }} >
                             <option>Select..</option>
                             <option>Pakistan</option>
                             <option>UAE</option>
