@@ -2,7 +2,7 @@ import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
 import BlogSchema from '@/schemas/BlogSchema'
 import { BlogModel } from '@/models/BlogModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 
 export default class BlogService {
 
