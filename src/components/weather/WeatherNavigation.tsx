@@ -8,7 +8,7 @@ const WeatherNavigation = () => {
     const [region, setRegion] = useState("Select..")
     const getRegionUpdated = (e: any) => {
         console.log(e+ '-' + region)
-        var regionName = e.textContent;
+        var regionName = e;
         var extension = ".png";
         switch(regionName) {
             case 'Africa':
