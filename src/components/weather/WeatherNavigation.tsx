@@ -134,7 +134,7 @@ const WeatherNavigation = () => {
                 </div>
                 <div className='d-inline col-3'>
                     <label> &nbsp; <strong>City</strong> &nbsp;
-                        <select id="city_select" value={city} placeholder=" Search here " onChange={(e)=> { setCity(e.target.value); getCityUpdated(); } } >
+                        <select id="city_select" value={city} placeholder=" Search here " onChange={(e)=> { setCity(e.target.value); getCityUpdated(e); } } >
                             <option>Select..</option>
                             <option>Multan</option>
                             <option>Karachi</option>
