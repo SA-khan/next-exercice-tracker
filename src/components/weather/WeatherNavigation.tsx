@@ -7,7 +7,7 @@ const WeatherNavigation = () => {
 
     const [region, setRegion] = useState("Select..")
     const getRegionUpdated = (e: any) => {
-        console.log(e+ '-' + region)
+        console.log(e.target.value+ '-' + region)
         var regionName = e;
         var extension = ".png";
         switch(regionName) {
