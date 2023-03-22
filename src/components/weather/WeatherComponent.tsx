@@ -9,7 +9,7 @@ import { CountryModel } from '@/models/CountryModel';
 let api_call = (new WeatherService()).GetLatestWeatherUpdates();
 
 
-const WeatherComponent = ({regionParam, cityParam, countryParam}:{regionParam: RegionModel, cityParam: CityModel, countryParam: CountryModel}) => {
+const WeatherComponent = ({regionParam, cityParam, countryParam}:{regionParam?: RegionModel, cityParam?: CityModel, countryParam?: CountryModel}) => {
 
     const [envelop, setEnvelop] = useState([new Envelop()]);
     const [weather, setWeather] = useState(new WeatherModel());
