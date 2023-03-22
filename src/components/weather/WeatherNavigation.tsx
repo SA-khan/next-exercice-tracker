@@ -35,13 +35,13 @@ const WeatherNavigation = () => {
             default:
                 regionName = "regions"
         }
-        var bg = document.getElementById('weather_view');
+        var bg = document.getElementById('weather_view') as HTMLElement;
         var path = '/images/regions/' + regionName + extension;
         console.log(path);
-        // bg.style.backgroundImage = "url('" + path + "')";
-        // var globe = document.getElementById('globe_view');
-        // var globe_path = '/images/regions/' + regionName + '_globe' + extension;
-        // globe.style.backgroundImage = "url('" + globe_path + "')";
+        bg.style.backgroundImage = "url('" + path + "')";
+        var globe = document.getElementById('globe_view') as HTMLElement;
+        var globe_path = '/images/regions/' + regionName + '_globe' + extension;
+        globe.style.backgroundImage = "url('" + globe_path + "')";
     }
 
     const [country, setCountry] = useState("Select..")
