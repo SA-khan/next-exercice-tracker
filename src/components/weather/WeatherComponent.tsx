@@ -3,10 +3,13 @@ import Envelop from '@/models/Envelop';
 import { WeatherService } from '@/services/WeatherService';
 import { WeatherModel } from '@/models/WeatherModel';
 import Image from 'next/image'
+import { RegionModel } from '@/models/RegionModel';
+import { CityModel } from '@/models/CityModel';
+import { CountryModel } from '@/models/CountryModel';
 let api_call = (new WeatherService()).GetLatestWeatherUpdates();
 
 
-const WeatherComponent = ({}) => {
+const WeatherComponent = ({regionParam, cityParam, countryParam}:{regionParam: RegionModel, cityParam: CityModel, countryParam: CountryModel}) => {
 
     const [envelop, setEnvelop] = useState([new Envelop()]);
     const [weather, setWeather] = useState(new WeatherModel());
@@ -17,8 +20,8 @@ const WeatherComponent = ({}) => {
         }
         call();
 
-        // var coordinates = document.getElementById('geo_txt');
-        // coordinates.value = weather.location?.lon + ", " + weather.location?.lat;
+        var coordinates = document.getElementById('geo_txt') as HTMLInputElement;
+        coordinates.value = weather.location?.lon + ", " + weather.location?.lat;
 
         // const isDay = weather.current?.is_day; // ? (document.getElementById('main_view')?.classList.add('bg-light')) : (document.getElementById('main_view')?.classList.add('bg-dark'))
         // console.log("Day-"+isDay)

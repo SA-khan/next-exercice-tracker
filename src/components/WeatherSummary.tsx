@@ -18,7 +18,7 @@ const WeatherSummary = ({weather}: {weather: WeatherModel}) => {
                     
                 </div>
             </div>
-            {/* < WeatherComponent regionParam = {weather.region}  cityParam = {weather.city} countryParam = {weather.country} /> */}
+            < WeatherComponent regionParam = {weather.region}  cityParam = {weather.city} countryParam = {weather.country} />
             <div className='card-body'>
                 <a className='btn btn-primary'>Read more</a>
             </div>
