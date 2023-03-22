@@ -4,7 +4,7 @@ import  utilStyles  from '../styles/utils.module.css'
 import { WeatherModel } from '@/models/WeatherModel'
 import WeatherComponent from '@/components/weather/WeatherComponent'
 
-const WeatherSummary = (weather: WeatherModel) => {
+const WeatherSummary = ({weather}: {weather: WeatherModel}) => {
     return <React.Fragment>
         <div id='main_view' className='card p-2 mb-2'>
             <div id="weather_view" className={utilStyles.weather_view}>

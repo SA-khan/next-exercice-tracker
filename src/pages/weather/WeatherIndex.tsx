@@ -14,6 +14,7 @@ import { GeoCoordinateModel } from '@/models/GeoCoordinateModel'
 import { CurrencyModel } from '@/models/CurrencyModel'
 import WeatherNavigation from '@/components/weather/WeatherNavigation'
 import { WeatherLocationModel } from '@/models/WeatherLocationModel'
+import { WeatherCurrentModel } from '@/models/WeatherCurrentModel'
 
 const WeatherIndex = () => {
     const flag = new FlagModel(1, "pk", "Pakistan Flag", '/images/countries/pk.png', true);
@@ -24,13 +25,13 @@ const WeatherIndex = () => {
     const country = new CountryModel(1, 'COUN-PK', 'Pakistan', 'Islamic Repulic of Pakistan', 'pk', '/images/countries/pakistan.gif', geoLocationPakistan, flag, regionSouthAsia, currencyPakistan, 31, 3_000_0000, true )
     const geoLocationKarachi = new GeoCoordinateModel(3, 'Karachi', 'Karachi Pakistan Coordinates', 66.990501, 24.860966, '/images/cities/pakistan-karachi.jpg', true);
     const city = new CityModel(1, 'pk-KHI', 'Karachi', 'City of Lights', 'KHI', '/images/cities/pakistan_karachi.jfif', geoLocationKarachi, 'The City of Lights Karachi', country, true );
-    // const weather = new WeatherModel(1,'KHI-021', 'Clear Weather', new WeatherLocationModel(), WeatherTypeEnum.Clear, DayTypeEnum.Day, '19C', '20C', '302F', city, country, '2023-02-22' )
+    const weather = new WeatherModel(1,'KHI-021', 'Clear Weather', new WeatherLocationModel(), new WeatherCurrentModel(), 'Demo', WeatherTypeEnum.Chill, DayTypeEnum.Day, '19C', '20C', '302F', city, country, regionSouthAsia,'2023-02-22' )
     return <React.Fragment>
         <Layout>
             <PageHeading title="Weather Updates" source="weather.png" />
             <WeatherNavigation />
             <>
-                {/* <WeatherSummary   {...weather}/> */}
+                <WeatherSummary  weather={weather} />
             </>
         </Layout>
     </React.Fragment>;
