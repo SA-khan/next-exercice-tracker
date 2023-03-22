@@ -18,12 +18,12 @@ const Navigation = () => {
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/weather">Weather</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/weather/WeatherIndex">Weather</Link>
                         </th>
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/news">News</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/news/NewsIndex">News</Link>
                         </th>
                     </tr>
                     <tr className="table-row">
@@ -33,12 +33,12 @@ const Navigation = () => {
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/blogs">Blogs</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/blogs/BlogsIndex">Blogs</Link>
                         </th>
                     </tr>
                     <tr className="table-row">
                         <th className="table-col">
-                            <Link className='text-white text-decoration-none p-2' href="/exercise">Exercise Tracking</Link>
+                            <Link className='text-white text-decoration-none p-2' href="/exercise/ExerciseIndex">Exercise Tracking</Link>
                         </th>
                     </tr>
                 </tbody>
