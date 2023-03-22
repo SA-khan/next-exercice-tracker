@@ -6,7 +6,7 @@ import { WeatherModel } from '@/models/WeatherModel'
 const WeatherNavigation = () => {
 
     const [region, setRegion] = useState("Select..")
-    const getRegionUpdated = (e: HTMLSelectElement) => {
+    const getRegionUpdated = (e: any) => {
         console.log(e+ '-' + region)
         var regionName = e.textContent;
         var extension = ".png";
