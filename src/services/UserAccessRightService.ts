@@ -2,7 +2,7 @@ import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
 import UserAccessRightSchema from '@/schemas/UserAccessRightSchema'
 import { UserAccessRightModel } from '@/models/UserAccessRightModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 
 export class UserAccessRightService {
 

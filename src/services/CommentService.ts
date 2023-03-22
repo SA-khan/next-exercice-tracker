@@ -2,7 +2,7 @@ import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
 import CommentSchema from '@/schemas/CommentSchema'
 import { CommentModel } from '@/models/CommentModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 
 export class CommentService {
 

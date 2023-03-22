@@ -2,7 +2,7 @@ import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
 import UserDemographicSchema from '@/schemas/UserDemographicSchema'
 import { UserDemographicModel } from '@/models/UserDemographicModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 
 export class UserDemographicService {
 

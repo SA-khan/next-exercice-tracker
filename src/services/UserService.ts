@@ -2,7 +2,7 @@ import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
 import UserSchema from '@/schemas/UserSchema'
 import { UserModel } from '@/models/UserModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 
 export class TaskService {
 

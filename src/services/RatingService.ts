@@ -2,7 +2,7 @@ import Mongoose from 'mongoose'
 import MongoDb from 'mongodb'
 import RatingSchema from '@/schemas/RatingSchema'
 import { RatingModel } from '@/models/RatingModel'
-import { Envelop } from '@/models/Envelop';
+import Envelop from '@/models/Envelop';
 
 export class RatingService {
 
