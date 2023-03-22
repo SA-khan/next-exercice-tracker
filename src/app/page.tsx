@@ -22,7 +22,8 @@ export default function Home() {
   return (
       <React.Fragment>
           <div className='card shadow p-2 mt-2 mb-2'>
-            <BrowserRouter>
+            <p>Hello Next!</p>
+            {/* <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Layout><Index /></Layout>}>
                   <Route index element={<Index/>} />
@@ -34,7 +35,7 @@ export default function Home() {
                   <Route path="exercise" element={<ExerciseIndex />} />
                 </Route>
               </Routes>
-            </BrowserRouter>
+            </BrowserRouter> */}
           </div>
       </React.Fragment>
   )
