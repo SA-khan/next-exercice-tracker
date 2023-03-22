@@ -11,7 +11,7 @@ const Login = () => {
             <div className={styles.container}>
 
                 <div className='shadow card p-2 w-50 h-50 border border-dark shadow'>
-                    <ExerciseTracker_LoginForm />
+                    {/* <ExerciseTracker_LoginForm /> */}
                     <div className='text-decoration-none d-inline p-2 bg-light border border-dark card shadow'>
                         Not a valid user? <Link className='text-decoration-none' href="/exercise/Register">Register Now</Link>
                     </div>

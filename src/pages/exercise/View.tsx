@@ -13,7 +13,7 @@ const view = () => {
                 <hr />
             <h2 className='bg-dark text-white text-center m-2 p-2 border border-black'>Exercise Track View</h2>
                 <div className='shadow card m-3 p-3'>
-                    <ViewActivity />
+                    {/* <ViewActivity /> */}
                     <br />
                 </div>
 

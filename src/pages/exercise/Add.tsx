@@ -6,7 +6,7 @@ const Add = () => {
     return <React.Fragment>
         <ExerciseLayout>
         <div className='card w-100 shadow'>
-            <AddActivity />
+            {/* <AddActivity /> */}
         </div>  
         </ExerciseLayout>
     </React.Fragment>;

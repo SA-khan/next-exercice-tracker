@@ -11,7 +11,7 @@ const register = () => {
             <div className={styles.container}>
 
                 <div className='shadow card p-2 w-50 h-50 border border-dark'>
-                    <RegisterForm />
+                    {/* <RegisterForm /> */}
                     <br />
                     <br />
                     <br />

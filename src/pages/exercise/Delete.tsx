@@ -11,7 +11,7 @@ const Delete = () => {
         <div className=''>
             <div className=''>
                 <div className='shadow card p-2 w-100 h-50 border border-dark'>
-                    <DeleteActivity />
+                    {/* <DeleteActivity /> */}
                     <br />
                     <br />
                     <br />

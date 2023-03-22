@@ -11,7 +11,7 @@ const Edit = () => {
         <div className='w-100'>
             <div className='w-100'>
                 <div className='shadow card p-2 w-100 h-50 border border-dark'>
-                    <EditActivity />
+                    {/* <EditActivity /> */}
                     <br />
                     <br />
                     <br />
