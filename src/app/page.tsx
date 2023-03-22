@@ -22,7 +22,9 @@ export default function Home() {
   return (
       <React.Fragment>
           <div className='card shadow p-2 mt-2 mb-2'>
-            <p>Hello Next!</p>
+            <Layout>
+              <Index />
+            </Layout>
             {/* <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Layout><Index /></Layout>}>
