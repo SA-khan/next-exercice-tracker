@@ -6,38 +6,38 @@ import { WeatherModel } from '@/models/WeatherModel'
 const WeatherNavigation = () => {
 
     const [region, setRegion] = useState("Select..")
-    const getRegionUpdated = () => {
-        // console.log(e+ '-' + region)
-        // var regionName = e;
-        // var extension = ".png";
-        // switch(regionName) {
-        //     case 'Africa':
-        //         regionName = "africa";
-        //         break;
-        //     case 'Asia':
-        //         regionName = "asia";
-        //         break;
-        //     case 'Antarctica':
-        //         regionName = "antarctica";
-        //         break;
-        //     case 'Australia':
-        //         regionName = "australia";
-        //         break;
-        //     case 'Europe':
-        //         regionName = "europe";
-        //         break;
-        //     case 'North America':
-        //         regionName = "north_america";
-        //         break;
-        //     case 'South America':
-        //         regionName = "south_america";
-        //         break;
-        //     default:
-        //         regionName = "regions"
-        // }
-        // var bg = document.getElementById('weather_view');
-        // var path = '/images/regions/' + regionName + extension;
-        // console.log(path);
+    const getRegionUpdated = (e: HTMLSelectElement) => {
+        console.log(e+ '-' + region)
+        var regionName = e.textContent;
+        var extension = ".png";
+        switch(regionName) {
+            case 'Africa':
+                regionName = "africa";
+                break;
+            case 'Asia':
+                regionName = "asia";
+                break;
+            case 'Antarctica':
+                regionName = "antarctica";
+                break;
+            case 'Australia':
+                regionName = "australia";
+                break;
+            case 'Europe':
+                regionName = "europe";
+                break;
+            case 'North America':
+                regionName = "north_america";
+                break;
+            case 'South America':
+                regionName = "south_america";
+                break;
+            default:
+                regionName = "regions"
+        }
+        var bg = document.getElementById('weather_view');
+        var path = '/images/regions/' + regionName + extension;
+        console.log(path);
         // bg.style.backgroundImage = "url('" + path + "')";
         // var globe = document.getElementById('globe_view');
         // var globe_path = '/images/regions/' + regionName + '_globe' + extension;
@@ -108,7 +108,7 @@ const WeatherNavigation = () => {
             <div className='row no-gutters border border-dark p-2 bg-light'>
                 <div className='d-inline col-3'>
                     <label> <strong>Region</strong> &nbsp;
-                        <select id="region_select" value={region} placeholder=" Search here " onChange={(e)=>{ setRegion(e.target.value); getRegionUpdated() }}>
+                        <select id="region_select" value={region} placeholder=" Search here " onChange={(e)=>{ setRegion(e.target.value); getRegionUpdated(e) }}>
                             <option>Select..</option>
                             <option>Africa</option>
                             <option>Asia</option>
