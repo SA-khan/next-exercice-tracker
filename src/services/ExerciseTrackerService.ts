@@ -47,8 +47,9 @@ export class ExerciseTrackerService {
                 console.log("Service Not Connected: /nReason: " + err)
             })
             .finally(()=>{
-                return new Envelop( true, 1000001, response);
+                
             });
+            return new Envelop( true, 1000001, response);
     }
 
     public async GetAll() : Promise<Envelop> {
@@ -67,8 +68,9 @@ export class ExerciseTrackerService {
                 console.log("Service Not Connected: /nReason: " + err)
             })
             .finally(()=>{
-                return response;
+                
             });
+            return response;
     }
 
     public connect = async (url: string, connectOptions: object) => {
