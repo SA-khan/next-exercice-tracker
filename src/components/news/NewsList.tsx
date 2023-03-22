@@ -7,17 +7,17 @@ import { NewsArticleModel } from '@/models/NewsArticleModel';
 import NewsReport from './NewsReport';
 import Link from 'next/link'
 
-const NewsList = (news: NewsArticleModel[]) => {
+const NewsList = (newsParam: NewsArticleModel[]) => {
     return <React.Fragment>
         <div className='overflow-scrollable'>
             <hr />
-            <NewsReport {...news?.[1]} />
+            <NewsReport {...newsParam?.[1]} />
             <hr />
-            <NewsReport {...news?.[2]} />
+            <NewsReport {...newsParam?.[2]} />
             <hr />
-            <NewsReport {...news?.[3]} />
+            <NewsReport {...newsParam?.[3]} />
             <hr />
-            <NewsReport {...news?.[4]} />
+            <NewsReport {...newsParam?.[4]} />
             <hr />
             <div className='text-center'>
             <Link className='text-decoration-none' href='/news/breaking'>See All</Link>

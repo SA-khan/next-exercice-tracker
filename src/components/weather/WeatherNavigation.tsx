@@ -48,6 +48,7 @@ const WeatherNavigation = () => {
 
     const getCountryUpdated = (e: any) => {
         var countryName = e.target.value.toLowerCase();
+        console.log('country:'+countryName);
         var extension = ".png";
         switch(countryName) {
             case 'pakistan':
