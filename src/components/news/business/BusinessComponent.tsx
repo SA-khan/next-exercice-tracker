@@ -10,7 +10,7 @@ import { NewsService } from '@/services/NewsService';
 import Goto from '../../controls/Goto';
 let api_call = (new NewsService()).GetGNews('business');
 
-const BusinessComponent = (news: NewsArticleModel[]) => {
+const BusinessComponent = () => {
 
     const [articles, setArticles] = useState<NewsArticleModel[] | undefined>()
 

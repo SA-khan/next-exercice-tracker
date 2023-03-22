@@ -29,7 +29,7 @@ const WeatherIndex = () => {
             <PageHeading title="Weather Updates" source="weather.png" />
             <WeatherNavigation />
             <>
-                <WeatherSummary   {...weather}/>
+                {/* <WeatherSummary   {...weather}/> */}
             </>
         </Layout>
     </React.Fragment>;
